@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "description": "Functions for Netlify",
+  "scripts": {
+    "serve": "netlify functions:serve",
+    "dev": "netlify dev",
+    "deploy": "firebase deploy --only functions"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@netlify/functions": "^1.3.0",
+    "http-status": "^1.5.3",
+    "mongodb": "^4.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.2",
+    "netlify-cli": "^12.0.11",
+    "typescript": "^4.8.4"
+  },
+  "private": true
+}
