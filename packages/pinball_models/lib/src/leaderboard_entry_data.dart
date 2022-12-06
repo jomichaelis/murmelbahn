@@ -1,26 +1,9 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part 'leaderboard_entry_data.g.dart';
-
-/// Google character type associated with a [LeaderboardEntryData].
-enum CharacterType {
-  /// Dash character.
-  dash,
-
-  /// Sparky character.
-  sparky,
-
-  /// Android character.
-  android,
-
-  /// Dino character.
-  dino,
-}
-
 /// {@template leaderboard_entry_data}
-/// A model representing a leaderboard entry containing the player's initials,
-/// score, and chosen character.
+/// A model representing a leaderboard entry containing the player's initials
+/// and score.
 ///
 /// Stored in Firestore `leaderboard` collection.
 ///
@@ -28,8 +11,7 @@ enum CharacterType {
 /// ```json
 /// {
 ///   "playerInitials" : "ABC",
-///   "score" : 1500,
-///   "character" : "dash"
+///   "score" : 1500
 /// }
 /// ```
 /// {@endtemplate}
@@ -39,16 +21,21 @@ class LeaderboardEntryData extends Equatable {
   const LeaderboardEntryData({
     required this.playerInitials,
     required this.score,
-    required this.character,
   });
 
   /// Factory which converts a [Map] into a [LeaderboardEntryData].
   factory LeaderboardEntryData.fromJson(Map<String, dynamic> json) {
-    return _$LeaderboardEntryFromJson(json);
+    return LeaderboardEntryData(
+      playerInitials: json['playerInitials'] as String,
+      score: json['score'] as int,
+    );
   }
 
   /// Converts the [LeaderboardEntryData] to [Map].
-  Map<String, dynamic> toJson() => _$LeaderboardEntryToJson(this);
+  Map<String, dynamic> toJson() => {
+      'playerInitials': playerInitials,
+      'score': score,
+  };
 
   /// Player's chosen initials for [LeaderboardEntryData].
   ///
@@ -62,19 +49,12 @@ class LeaderboardEntryData extends Equatable {
   @JsonKey(name: 'score')
   final int score;
 
-  /// [CharacterType] for [LeaderboardEntryData].
-  ///
-  /// Example: [CharacterType.dash].
-  @JsonKey(name: 'character')
-  final CharacterType character;
-
   /// An empty [LeaderboardEntryData] object.
   static const empty = LeaderboardEntryData(
     playerInitials: '',
     score: 0,
-    character: CharacterType.dash,
   );
 
   @override
-  List<Object?> get props => [playerInitials, score, character];
+  List<Object?> get props => [playerInitials, score];
 }

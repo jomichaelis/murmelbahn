@@ -8,15 +8,15 @@ void main() {
   group('ArcadeBackgroundState', () {
     test('supports value equality', () {
       expect(
-        ArcadeBackgroundState(characterTheme: DashTheme()),
-        equals(ArcadeBackgroundState(characterTheme: DashTheme())),
+        ArcadeBackgroundState(characterTheme: ScoutTheme()),
+        equals(ArcadeBackgroundState(characterTheme: ScoutTheme())),
       );
     });
 
     group('constructor', () {
       test('can be instantiated', () {
         expect(
-          ArcadeBackgroundState(characterTheme: DashTheme()),
+          ArcadeBackgroundState(characterTheme: ScoutTheme()),
           isNotNull,
         );
       });
@@ -24,7 +24,7 @@ void main() {
       test('initial contains DashTheme', () {
         expect(
           ArcadeBackgroundState.initial().characterTheme,
-          DashTheme(),
+          ScoutTheme(),
         );
       });
     });

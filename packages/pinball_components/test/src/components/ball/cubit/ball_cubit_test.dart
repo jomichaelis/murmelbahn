@@ -10,8 +10,8 @@ void main() {
       blocTest<BallCubit, BallState>(
         'onCharacterSelected emits new theme',
         build: BallCubit.new,
-        act: (bloc) => bloc.onCharacterSelected(const DinoTheme()),
-        expect: () => [const BallState(characterTheme: DinoTheme())],
+        act: (bloc) => bloc.onCharacterSelected(const ScoutTheme()),
+        expect: () => [const BallState(characterTheme: ScoutTheme())],
       );
     },
   );

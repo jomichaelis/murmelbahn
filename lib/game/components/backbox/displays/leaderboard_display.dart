@@ -7,6 +7,7 @@ import 'package:pinball/leaderboard/models/leader_board_entry.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 import 'package:pinball_models/pinball_models.dart';
+import 'package:pinball_theme/pinball_theme.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 final _titleTextPaint = TextPaint(
@@ -182,7 +183,7 @@ class _RankingPage extends PositionComponent with HasGameRef {
             ),
             SpriteComponent.fromImage(
               gameRef.images.fromCache(
-                ranking[i].character.toTheme.leaderboardIcon.keyName,
+                ScoutTheme().leaderboardIcon.keyName,
               ),
               anchor: Anchor.center,
               size: Vector2(1.8, 1.8),

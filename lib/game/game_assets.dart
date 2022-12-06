@@ -7,10 +7,7 @@ import 'package:pinball_theme/pinball_theme.dart' hide Assets;
 extension PinballGameAssetsX on PinballGame {
   /// Returns a list of assets to be loaded
   List<Future<Image> Function()> preLoadAssets() {
-    const dashTheme = DashTheme();
-    const sparkyTheme = SparkyTheme();
-    const androidTheme = AndroidTheme();
-    const dinoTheme = DinoTheme();
+    const scoutTheme = ScoutTheme();
     return [
       () => images.load(components.Assets.images.boardBackground.keyName),
       () => images.load(components.Assets.images.ball.flameEffect.keyName),
@@ -184,18 +181,9 @@ extension PinballGameAssetsX on PinballGame {
           images.load(components.Assets.images.displayArrows.arrowLeft.keyName),
       () => images
           .load(components.Assets.images.displayArrows.arrowRight.keyName),
-      () => images.load(androidTheme.leaderboardIcon.keyName),
-      () => images.load(androidTheme.ball.keyName),
-      () => images.load(dashTheme.leaderboardIcon.keyName),
-      () => images.load(dashTheme.ball.keyName),
-      () => images.load(dinoTheme.leaderboardIcon.keyName),
-      () => images.load(dinoTheme.ball.keyName),
-      () => images.load(sparkyTheme.leaderboardIcon.keyName),
-      () => images.load(sparkyTheme.ball.keyName),
-      () => images.load(androidTheme.background.keyName),
-      () => images.load(dashTheme.background.keyName),
-      () => images.load(dinoTheme.background.keyName),
-      () => images.load(sparkyTheme.background.keyName),
+      () => images.load(scoutTheme.leaderboardIcon.keyName),
+      () => images.load(scoutTheme.ball.keyName),
+      () => images.load(scoutTheme.background.keyName),
     ];
   }
 }

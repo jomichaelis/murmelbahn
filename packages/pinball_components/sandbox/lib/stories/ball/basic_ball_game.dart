@@ -12,10 +12,7 @@ class BallGame extends AssetsGame with TapDetector, Traceable {
     List<String>? imagesFileNames,
   }) : super(
           imagesFileNames: [
-            theme.Assets.images.android.ball.keyName,
-            theme.Assets.images.dash.ball.keyName,
-            theme.Assets.images.dino.ball.keyName,
-            theme.Assets.images.sparky.ball.keyName,
+            theme.Assets.images.scout.ball.keyName,
             if (imagesFileNames != null) ...imagesFileNames,
           ],
         );
@@ -27,10 +24,7 @@ class BallGame extends AssetsGame with TapDetector, Traceable {
 ''';
 
   static final characterBallPaths = <String, String>{
-    'Dash': theme.Assets.images.dash.ball.keyName,
-    'Sparky': theme.Assets.images.sparky.ball.keyName,
-    'Android': theme.Assets.images.android.ball.keyName,
-    'Dino': theme.Assets.images.dino.ball.keyName,
+    'Scout': theme.Assets.images.scout.ball.keyName,
   };
 
   final int ballPriority;

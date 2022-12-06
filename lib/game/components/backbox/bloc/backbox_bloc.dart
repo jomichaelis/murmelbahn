@@ -52,7 +52,6 @@ class BackboxBloc extends Bloc<BackboxEvent, BackboxState> {
         LeaderboardEntryData(
           playerInitials: event.initials,
           score: event.score,
-          character: event.character.toType,
         ),
       );
       emit(

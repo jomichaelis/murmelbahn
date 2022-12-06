@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:pinball_models/pinball_models.dart';
-import 'package:pinball_theme/pinball_theme.dart';
 
 /// {@template leaderboard_entry}
 /// A model representing a leaderboard entry containing the ranking position,
@@ -13,7 +12,6 @@ class LeaderboardEntry extends Equatable {
     required this.rank,
     required this.playerInitials,
     required this.score,
-    required this.character,
   });
 
   /// Ranking position for [LeaderboardEntry].
@@ -25,11 +23,8 @@ class LeaderboardEntry extends Equatable {
   /// Score for [LeaderboardEntry].
   final int score;
 
-  /// [CharacterTheme] for [LeaderboardEntry].
-  final AssetGenImage character;
-
   @override
-  List<Object?> get props => [rank, playerInitials, score, character];
+  List<Object?> get props => [rank, playerInitials, score];
 }
 
 /// Converts [LeaderboardEntryData] from repository to [LeaderboardEntry].
@@ -40,45 +35,6 @@ extension LeaderboardEntryDataX on LeaderboardEntryData {
       rank: position.toString(),
       playerInitials: playerInitials,
       score: score,
-      character: character.toTheme.leaderboardIcon,
     );
-  }
-}
-
-/// Converts [CharacterType] to [CharacterTheme] to show on UI character theme
-/// from repository.
-extension CharacterTypeX on CharacterType {
-  /// Conversion method to [CharacterTheme]
-  CharacterTheme get toTheme {
-    switch (this) {
-      case CharacterType.dash:
-        return const DashTheme();
-      case CharacterType.sparky:
-        return const SparkyTheme();
-      case CharacterType.android:
-        return const AndroidTheme();
-      case CharacterType.dino:
-        return const DinoTheme();
-    }
-  }
-}
-
-/// Converts [CharacterTheme] to [CharacterType] to persist at repository the
-/// character theme from UI.
-extension CharacterThemeX on CharacterTheme {
-  /// Conversion method to [CharacterType]
-  CharacterType get toType {
-    switch (runtimeType) {
-      case DashTheme:
-        return CharacterType.dash;
-      case SparkyTheme:
-        return CharacterType.sparky;
-      case AndroidTheme:
-        return CharacterType.android;
-      case DinoTheme:
-        return CharacterType.dino;
-      default:
-        return CharacterType.dash;
-    }
   }
 }

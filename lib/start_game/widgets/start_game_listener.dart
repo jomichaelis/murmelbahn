@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pinball/game/game.dart';
 import 'package:pinball/how_to_play/how_to_play.dart';
-import 'package:pinball/select_character/select_character.dart';
 import 'package:pinball/start_game/start_game.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
@@ -29,26 +28,15 @@ class StartGameListener extends StatelessWidget {
         switch (state.status) {
           case StartGameStatus.initial:
             break;
-          case StartGameStatus.selectCharacter:
-            _onSelectCharacter(context);
-            context.read<GameBloc>().add(const GameStarted());
-            break;
           case StartGameStatus.howToPlay:
             _onHowToPlay(context);
+            context.read<GameBloc>().add(const GameStarted());
             break;
           case StartGameStatus.play:
             break;
         }
       },
       child: _child,
-    );
-  }
-
-  void _onSelectCharacter(BuildContext context) {
-    _showPinballDialog(
-      context: context,
-      child: const CharacterSelectionDialog(),
-      barrierDismissible: false,
     );
   }
 

@@ -15,7 +15,7 @@ void main() {
     'BallTurboChargingBehavior',
     () {
       final assets = [
-        theme.Assets.images.dash.ball.keyName,
+        theme.Assets.images.scout.ball.keyName,
         Assets.images.ball.flameEffect.keyName,
       ];
       final flameTester = FlameTester(() => TestGame(assets));

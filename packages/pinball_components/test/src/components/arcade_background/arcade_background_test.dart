@@ -11,10 +11,7 @@ import '../../../helpers/helpers.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final assets = [
-    theme.Assets.images.android.background.keyName,
-    theme.Assets.images.dash.background.keyName,
-    theme.Assets.images.dino.background.keyName,
-    theme.Assets.images.sparky.background.keyName,
+    theme.Assets.images.scout.background.keyName,
   ];
 
   final flameTester = FlameTester(() => TestGame(assets));
@@ -67,7 +64,7 @@ void main() {
         final originalSprite = ballSprite.sprite;
 
         ballSprite.onNewState(
-          const ArcadeBackgroundState(characterTheme: theme.DinoTheme()),
+          const ArcadeBackgroundState(characterTheme: theme.ScoutTheme()),
         );
         await game.ready();
 

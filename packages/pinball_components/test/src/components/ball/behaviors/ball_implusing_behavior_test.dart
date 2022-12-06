@@ -14,7 +14,7 @@ void main() {
   group(
     'BallImpulsingBehavior',
     () {
-      final asset = theme.Assets.images.dash.ball.keyName;
+      final asset = theme.Assets.images.scout.ball.keyName;
       final flameTester = FlameTester(() => TestGame([asset]));
 
       test('can be instantiated', () {

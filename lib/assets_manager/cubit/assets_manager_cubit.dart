@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:pinball/game/game.dart';
-import 'package:pinball/select_character/select_character.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 
 part 'assets_manager_state.dart';
@@ -24,7 +23,6 @@ class AssetsManagerCubit extends Cubit<AssetsManagerState> {
       ..._game.preLoadAssets(),
       ..._audioPlayer.load(),
       ...BonusAnimation.loadAssets(),
-      ...SelectedCharacter.loadAssets(),
     ];
     emit(
       state.copyWith(

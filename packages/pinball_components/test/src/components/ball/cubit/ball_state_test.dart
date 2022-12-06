@@ -8,14 +8,14 @@ void main() {
   group('BallState', () {
     test('supports value equality', () {
       expect(
-        BallState(characterTheme: DashTheme()),
-        equals(const BallState(characterTheme: DashTheme())),
+        BallState(characterTheme: ScoutTheme()),
+        equals(const BallState(characterTheme: ScoutTheme())),
       );
     });
 
     group('constructor', () {
       test('can be instantiated', () {
-        expect(const BallState(characterTheme: DashTheme()), isNotNull);
+        expect(const BallState(characterTheme: ScoutTheme()), isNotNull);
       });
     });
   });

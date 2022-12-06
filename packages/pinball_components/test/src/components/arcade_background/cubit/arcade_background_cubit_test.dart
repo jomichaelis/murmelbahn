@@ -10,10 +10,10 @@ void main() {
       blocTest<ArcadeBackgroundCubit, ArcadeBackgroundState>(
         'onCharacterSelected emits new theme',
         build: ArcadeBackgroundCubit.new,
-        act: (bloc) => bloc.onCharacterSelected(const DinoTheme()),
+        act: (bloc) => bloc.onCharacterSelected(const ScoutTheme()),
         expect: () => [
           const ArcadeBackgroundState(
-            characterTheme: DinoTheme(),
+            characterTheme: ScoutTheme(),
           ),
         ],
       );

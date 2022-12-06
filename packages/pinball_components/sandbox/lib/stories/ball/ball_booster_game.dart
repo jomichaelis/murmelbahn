@@ -7,10 +7,7 @@ class BallBoosterGame extends LineGame {
   BallBoosterGame()
       : super(
           imagesFileNames: [
-            theme.Assets.images.android.ball.keyName,
-            theme.Assets.images.dash.ball.keyName,
-            theme.Assets.images.dino.ball.keyName,
-            theme.Assets.images.sparky.ball.keyName,
+            theme.Assets.images.scout.ball.keyName,
             Assets.images.ball.flameEffect.keyName,
           ],
         );

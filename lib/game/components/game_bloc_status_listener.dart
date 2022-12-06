@@ -1,10 +1,10 @@
 import 'package:flame/components.dart';
 import 'package:flame_bloc/flame_bloc.dart';
 import 'package:pinball/game/game.dart';
-import 'package:pinball/select_character/select_character.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
+import 'package:pinball_theme/pinball_theme.dart';
 
 /// Listens to the [GameBloc] and updates the game accordingly.
 class GameBlocStatusListener extends Component
@@ -37,9 +37,7 @@ class GameBlocStatusListener extends Component
         readProvider<PinballAudioPlayer>().play(PinballAudio.gameOverVoiceOver);
         gameRef.descendants().whereType<Backbox>().first.requestInitials(
               score: state.displayScore,
-              character: readBloc<CharacterThemeCubit, CharacterThemeState>()
-                  .state
-                  .characterTheme,
+              character: ScoutTheme(),
             );
         gameRef
             .descendants()

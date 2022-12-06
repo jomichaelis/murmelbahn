@@ -30,17 +30,6 @@ class ReplayTapped extends StartGameEvent {
   List<Object> get props => [];
 }
 
-/// {@template character_selected}
-/// Character selected event.
-/// {@endtemplate}
-class CharacterSelected extends StartGameEvent {
-  /// {@macro character_selected}
-  const CharacterSelected();
-
-  @override
-  List<Object> get props => [];
-}
-
 /// {@template how_to_play_finished}
 /// How to play finished event.
 /// {@endtemplate}

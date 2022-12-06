@@ -21,7 +21,7 @@ class _MockFixture extends Mock implements Fixture {}
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final assets = [
-    theme.Assets.images.dash.ball.keyName,
+    theme.Assets.images.scout.ball.keyName,
   ];
   final flameTester = FlameTester(() => TestGame(assets));
 

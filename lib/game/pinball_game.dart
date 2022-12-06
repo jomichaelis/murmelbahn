@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:pinball/game/behaviors/behaviors.dart';
 import 'package:pinball/game/game.dart';
 import 'package:pinball/l10n/l10n.dart';
-import 'package:pinball/select_character/select_character.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
@@ -21,7 +20,6 @@ import 'package:share_repository/share_repository.dart';
 class PinballGame extends PinballForge2DGame
     with HasKeyboardHandlerComponents, MultiTouchTapDetector, HasTappables {
   PinballGame({
-    required CharacterThemeCubit characterThemeBloc,
     required this.pinballRepository,
     required this.shareRepository,
     required GameBloc gameBloc,
@@ -31,7 +29,6 @@ class PinballGame extends PinballForge2DGame
   })  : focusNode = FocusNode(),
         _gameBloc = gameBloc,
         _audioPlayer = audioPlayer,
-        _characterThemeBloc = characterThemeBloc,
         _l10n = l10n,
         super(
           gravity: Vector2(0, 30),
@@ -52,8 +49,6 @@ class PinballGame extends PinballForge2DGame
   Color backgroundColor() => Colors.transparent;
 
   final FocusNode focusNode;
-
-  final CharacterThemeCubit _characterThemeBloc;
 
   final PinballAudioPlayer _audioPlayer;
 
@@ -87,9 +82,6 @@ class PinballGame extends PinballForge2DGame
           FlameBlocProvider<GameBloc, GameState>.value(
             value: _gameBloc,
           ),
-          FlameBlocProvider<CharacterThemeCubit, CharacterThemeState>.value(
-            value: _characterThemeBloc,
-          ),
         ],
         children: [
           MultiFlameProvider(
@@ -104,7 +96,6 @@ class PinballGame extends PinballForge2DGame
               BonusNoiseBehavior(),
               GameBlocStatusListener(),
               BallSpawningBehavior(),
-              CharacterSelectionBehavior(),
               CameraFocusingBehavior(),
               CanvasComponent(
                 onSpritePainted: (paint) {

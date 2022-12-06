@@ -6,7 +6,6 @@ import 'package:pinball/assets_manager/assets_manager.dart';
 import 'package:pinball/game/game.dart';
 import 'package:pinball/l10n/l10n.dart';
 import 'package:pinball/more_information/more_information.dart';
-import 'package:pinball/select_character/select_character.dart';
 import 'package:pinball/start_game/start_game.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_repository/pinball_repository.dart';
@@ -24,14 +23,12 @@ class PinballGamePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final characterThemeBloc = context.read<CharacterThemeCubit>();
     final audioPlayer = context.read<PinballAudioPlayer>();
     final pinballRepository = context.read<PinballRepository>();
     final shareRepository = context.read<ShareRepository>();
     final platformHelper = context.read<PlatformHelper>();
     final gameBloc = context.read<GameBloc>();
     final game = PinballGame(
-            characterThemeBloc: characterThemeBloc,
             audioPlayer: audioPlayer,
             pinballRepository: pinballRepository,
             shareRepository: shareRepository,

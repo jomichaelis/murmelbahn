@@ -5,9 +5,6 @@ enum StartGameStatus {
   /// Initial status.
   initial,
 
-  /// Selection characters status.
-  selectCharacter,
-
   /// How to play status.
   howToPlay,
 

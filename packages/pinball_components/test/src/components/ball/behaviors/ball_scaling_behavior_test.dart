@@ -11,7 +11,7 @@ import '../../../../helpers/helpers.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final flameTester = FlameTester(
-    () => TestGame([theme.Assets.images.dash.ball.keyName]),
+    () => TestGame([theme.Assets.images.scout.ball.keyName]),
   );
 
   group('BallScalingBehavior', () {
