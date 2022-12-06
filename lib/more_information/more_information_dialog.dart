@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:pinball/l10n/l10n.dart';
+import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 /// Inflates [MoreInformationDialog] using [showDialog].

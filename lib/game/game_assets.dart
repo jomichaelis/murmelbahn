@@ -1,5 +1,5 @@
 import 'package:flame/extensions.dart';
-import 'package:pinball/game/game.dart';
+import 'package:murmelbahn/game/game.dart';
 import 'package:pinball_components/pinball_components.dart' as components;
 import 'package:pinball_theme/pinball_theme.dart' hide Assets;
 

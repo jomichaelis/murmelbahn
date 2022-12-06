@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:pinball/leaderboard/models/leader_board_entry.dart';
+import 'package:murmelbahn/leaderboard/models/leader_board_entry.dart';
 import 'package:pinball_models/pinball_models.dart';
 import 'package:pinball_repository/pinball_repository.dart';
 import 'package:pinball_theme/pinball_theme.dart';

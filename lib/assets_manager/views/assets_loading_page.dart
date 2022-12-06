@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pinball/assets_manager/assets_manager.dart';
-import 'package:pinball/gen/gen.dart';
-import 'package:pinball/l10n/l10n.dart';
+import 'package:murmelbahn/assets_manager/assets_manager.dart';
+import 'package:murmelbahn/gen/gen.dart';
+import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 /// {@template assets_loading_page}

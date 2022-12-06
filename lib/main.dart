@@ -1,7 +1,7 @@
 import 'package:http_pinball_api/http_pinball_api.dart';
-import 'package:pinball/app/app.dart';
-import 'package:pinball/bootstrap.dart';
-import 'package:pinball/common/http/clients.dart';
+import 'package:murmelbahn/app/app.dart';
+import 'package:murmelbahn/bootstrap.dart';
+import 'package:murmelbahn/common/http/clients.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_repository/pinball_repository.dart';
 import 'package:platform_helper/platform_helper.dart';

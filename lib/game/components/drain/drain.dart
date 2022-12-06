@@ -1,7 +1,7 @@
 import 'package:flame/extensions.dart';
 import 'package:flame_forge2d/flame_forge2d.dart';
 import 'package:flutter/foundation.dart';
-import 'package:pinball/game/components/drain/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/components/drain/behaviors/behaviors.dart';
 import 'package:pinball_components/pinball_components.dart';
 
 /// {@template drain}

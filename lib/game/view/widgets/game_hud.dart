@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pinball/game/game.dart';
-import 'package:pinball/gen/gen.dart';
+import 'package:murmelbahn/game/game.dart';
+import 'package:murmelbahn/gen/gen.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 /// {@template game_hud}

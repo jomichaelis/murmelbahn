@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pinball/game/game.dart';
-import 'package:pinball/l10n/l10n.dart';
+import 'package:murmelbahn/game/game.dart';
+import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:pinball_components/pinball_components.dart';
 
 /// {@template score_view}

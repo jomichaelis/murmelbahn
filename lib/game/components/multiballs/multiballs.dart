@@ -1,6 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:pinball/game/components/multiballs/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/components/multiballs/behaviors/behaviors.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 

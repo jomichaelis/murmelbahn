@@ -2,8 +2,8 @@
 
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:pinball/game/behaviors/behaviors.dart';
-import 'package:pinball/game/components/sparky_scorch/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/components/sparky_scorch/behaviors/behaviors.dart';
 import 'package:pinball_components/pinball_components.dart';
 
 /// {@template sparky_scorch}

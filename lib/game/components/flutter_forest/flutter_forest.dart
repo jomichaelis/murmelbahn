@@ -3,8 +3,8 @@
 import 'package:flame/components.dart';
 import 'package:flame_bloc/flame_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:pinball/game/behaviors/behaviors.dart';
-import 'package:pinball/game/components/flutter_forest/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/components/flutter_forest/behaviors/behaviors.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 

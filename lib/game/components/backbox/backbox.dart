@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:pinball/game/components/backbox/bloc/backbox_bloc.dart';
-import 'package:pinball/game/components/backbox/displays/displays.dart';
-import 'package:pinball/game/game.dart';
-import 'package:pinball/l10n/l10n.dart';
+import 'package:murmelbahn/game/components/backbox/bloc/backbox_bloc.dart';
+import 'package:murmelbahn/game/components/backbox/displays/displays.dart';
+import 'package:murmelbahn/game/game.dart';
+import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 import 'package:pinball_models/pinball_models.dart';

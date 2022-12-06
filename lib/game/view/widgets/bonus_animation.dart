@@ -1,7 +1,7 @@
 import 'package:flame/flame.dart';
 import 'package:flame/sprite.dart';
 import 'package:flutter/material.dart' hide Image;
-import 'package:pinball/gen/assets.gen.dart';
+import 'package:murmelbahn/gen/assets.gen.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 
 /// {@template bonus_animation}

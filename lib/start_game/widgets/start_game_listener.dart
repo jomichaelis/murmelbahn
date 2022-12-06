@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pinball/game/game.dart';
-import 'package:pinball/how_to_play/how_to_play.dart';
-import 'package:pinball/start_game/start_game.dart';
+import 'package:murmelbahn/game/game.dart';
+import 'package:murmelbahn/how_to_play/how_to_play.dart';
+import 'package:murmelbahn/start_game/start_game.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 /// {@template start_game_listener}
