@@ -91,7 +91,7 @@ class _ScoreViewDecoration extends StatelessWidget {
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage(
-            Assets.images.score.miniScoreBackground.path,
+            Assets.images.score.mbMiniScoreBackgroundPng.path,
           ),
         ),
       ),

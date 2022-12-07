@@ -25,7 +25,7 @@ class AssetsLoadingPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Assets.images.loadingGame.ioPinball.image(),
+              child: Assets.images.loadingGame.mbIoPinballPng.image(),
             ),
             const SizedBox(height: 40),
             AnimatedEllipsisText(
