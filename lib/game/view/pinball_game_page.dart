@@ -133,10 +133,11 @@ class _PositionedGameHud extends StatelessWidget {
     final gameWidgetWidth = MediaQuery.of(context).size.height * 9 / 16;
     final screenWidth = MediaQuery.of(context).size.width;
     final leftMargin = (screenWidth / 2) - (gameWidgetWidth / 1.8);
-    final clampedMargin = leftMargin > 0 ? leftMargin : 0.0;
+    final clampedMargin = leftMargin > 0 ? leftMargin : 10.0;
+    final top = 60.0;
 
     return Positioned(
-      top: 0,
+      top: top,
       left: clampedMargin,
       child: Visibility(
         visible: isPlaying && !isGameOver,
