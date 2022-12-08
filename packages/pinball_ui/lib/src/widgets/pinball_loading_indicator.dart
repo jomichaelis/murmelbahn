@@ -20,44 +20,14 @@ class PinballLoadingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        _InnerIndicator(value: value, widthFactor: 0.95),
-        _InnerIndicator(value: value, widthFactor: 0.98),
-        _InnerIndicator(value: value),
-        _InnerIndicator(value: value),
-        _InnerIndicator(value: value, widthFactor: 0.98),
-        _InnerIndicator(value: value, widthFactor: 0.95)
-      ],
-    );
-  }
-}
-
-class _InnerIndicator extends StatelessWidget {
-  const _InnerIndicator({
-    Key? key,
-    required this.value,
-    this.widthFactor = 1.0,
-  }) : super(key: key);
-
-  final double value;
-  final double widthFactor;
-
-  @override
-  Widget build(BuildContext context) {
     return FractionallySizedBox(
-      widthFactor: widthFactor,
       child: Column(
         children: [
           LinearProgressIndicator(
-            backgroundColor: PinballColors.loadingDarkBlue,
-            color: PinballColors.loadingDarkRed,
+            backgroundColor: PinballColors.loadingDark,
+            color: PinballColors.loadingLight,
             value: value,
-          ),
-          LinearProgressIndicator(
-            backgroundColor: PinballColors.loadingLightBlue,
-            color: PinballColors.loadingLightRed,
-            value: value,
+            minHeight: 15,
           ),
         ],
       ),
