@@ -127,7 +127,7 @@ class _SpaceshipRampBackgroundRailingSpriteComponent extends SpriteComponent
     await super.onLoad();
     final sprite = Sprite(
       gameRef.images.fromCache(
-        Assets.images.android.ramp.railingBackground.keyName,
+        Assets.images.android.ramp.bridgeBackground.keyName,
       ),
     );
     this.sprite = sprite;
@@ -148,7 +148,7 @@ class _SpaceshipRampBackgroundRampSpriteComponent extends SpriteComponent
     await super.onLoad();
     final sprite = Sprite(
       gameRef.images.fromCache(
-        Assets.images.android.ramp.main.keyName,
+        Assets.images.android.ramp.bridge.keyName,
       ),
     );
     this.sprite = sprite;
@@ -402,7 +402,7 @@ class _SpaceshipRampForegroundRailingSpriteComponent extends SpriteComponent
   _SpaceshipRampForegroundRailingSpriteComponent()
       : super(
           anchor: Anchor.center,
-          position: Vector2(-12.3, -52.5),
+          position: Vector2(-12.3, -51.5),
         );
 
   @override
@@ -410,7 +410,7 @@ class _SpaceshipRampForegroundRailingSpriteComponent extends SpriteComponent
     await super.onLoad();
     final sprite = Sprite(
       gameRef.images.fromCache(
-        Assets.images.android.ramp.railingForeground.keyName,
+        Assets.images.android.ramp.bridgeForeground.keyName,
       ),
     );
     this.sprite = sprite;
