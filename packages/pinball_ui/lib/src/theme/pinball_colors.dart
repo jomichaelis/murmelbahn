@@ -26,14 +26,11 @@ abstract class PinballColors {
   /// Color: 0x00000000
   static const Color transparent = Color(0x00000000);
 
-  /// Color: 0xFFE33B2D
-  static const Color loadingDarkRed = Color(0xFFE33B2D);
+  /// Color: 0xFF393939
+  static const Color loadingDark = Color(0xFF393939);
 
-  /// Color: 0xFFEC5E2B
-  static const Color loadingLightRed = Color(0xFFEC5E2B);
-
-  /// Color: 0xFF4087F8
-  static const Color loadingDarkBlue = Color(0xFF4087F8);
+  /// Color: 0xFFCECECE
+  static const Color loadingLight = Color(0xFFCECECE);
 
   /// Color: 0xFF6CCAE4
   static const Color loadingLightBlue = Color(0xFF6CCAE4);

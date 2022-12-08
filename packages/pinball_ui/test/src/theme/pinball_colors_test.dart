@@ -36,16 +36,12 @@ void main() {
       expect(PinballColors.transparent, const Color(0x00000000));
     });
 
-    test('loadingDarkRed is 0xFFE33B2D', () {
-      expect(PinballColors.loadingDarkRed, const Color(0xFFE33B2D));
+    test('loadingDarkBlue is 0xFF393939', () {
+      expect(PinballColors.loadingDark, const Color(0xFF393939));
     });
 
-    test('loadingLightRed is 0xFFEC5E2B', () {
-      expect(PinballColors.loadingLightRed, const Color(0xFFEC5E2B));
-    });
-
-    test('loadingDarkBlue is 0xFF4087F8', () {
-      expect(PinballColors.loadingDarkBlue, const Color(0xFF4087F8));
+    test('loadingDarkBlue is 0xFFCECECE', () {
+      expect(PinballColors.loadingLight, const Color(0xFFCECECE));
     });
 
     test('loadingLightBlue is 0xFF6CCAE4', () {
