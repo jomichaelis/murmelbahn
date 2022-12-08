@@ -51,8 +51,8 @@ class CameraFocusingBehavior extends Component
           position: _foci[GameStatus.waiting]?.position ?? Vector2(0, -112),
         ),
         GameStatus.playing: _FocusData(
-          zoom: size.y / 160,
-          position: _foci[GameStatus.playing]?.position ?? Vector2(0, -7.8),
+          zoom: size.y / 185,
+          position: _foci[GameStatus.playing]?.position ?? Vector2(0, -20.8),
         ),
         GameStatus.gameOver: _FocusData(
           zoom: size.y / 100,
