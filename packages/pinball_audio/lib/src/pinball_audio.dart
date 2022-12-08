@@ -100,7 +100,7 @@ class _SimplePlayAudio extends _Audio {
 
   @override
   void play() {
-    playSingleAudio(prefixFile(path), volume: volume ?? 1);
+    // playSingleAudio(prefixFile(path), volume: volume ?? 1);
   }
 }
 
@@ -122,7 +122,7 @@ class _LoopAudio extends _Audio {
 
   @override
   void play() {
-    loopSingleAudio(prefixFile(path), volume: volume ?? 1);
+    // loopSingleAudio(prefixFile(path), volume: volume ?? 1);
   }
 }
 
@@ -144,7 +144,7 @@ class _SingleLoopAudio extends _LoopAudio {
   @override
   void play() {
     if (!_playing) {
-      super.play();
+      // super.play();
       _playing = true;
     }
   }
@@ -172,7 +172,8 @@ class _SingleAudioPool extends _Audio {
   }
 
   @override
-  void play() => pool.start();
+  // void play() => pool.start();
+  void play() => {};
 }
 
 class _RandomABAudio extends _Audio {
@@ -213,7 +214,7 @@ class _RandomABAudio extends _Audio {
 
   @override
   void play() {
-    (seed.nextBool() ? audioA : audioB).start(volume: volume ?? 1);
+    // (seed.nextBool() ? audioA : audioB).start(volume: volume ?? 1);
   }
 }
 
@@ -241,7 +242,7 @@ class _ThrottledAudio extends _Audio {
     if (_lastPlayed == null ||
         (_lastPlayed != null && now.difference(_lastPlayed!) > duration)) {
       _lastPlayed = now;
-      playSingleAudio(prefixFile(path));
+      // playSingleAudio(prefixFile(path));
     }
   }
 }
@@ -380,6 +381,6 @@ class PinballAudioPlayer {
       audios.containsKey(audio),
       'Tried to play unregistered audio $audio',
     );
-    audios[audio]?.play();
+    // audios[audio]?.play();
   }
 }
