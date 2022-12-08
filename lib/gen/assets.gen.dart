@@ -16,8 +16,6 @@ class $AssetsImagesGen {
       const $AssetsImagesBonusAnimationGen();
   $AssetsImagesComponentsGen get components =>
       const $AssetsImagesComponentsGen();
-  $AssetsImagesLoadingGameGen get loadingGame =>
-      const $AssetsImagesLoadingGameGen();
   $AssetsImagesScoreGen get score => const $AssetsImagesScoreGen();
 }
 
@@ -56,46 +54,13 @@ class $AssetsImagesComponentsGen {
   AssetGenImage get key =>
       const AssetGenImage('assets/images/components/key.png');
 
-  /// File path: assets/images/components/mb_key.afdesign
-  String get mbKeyAfdesign => 'assets/images/components/mb_key.afdesign';
-
-  /// File path: assets/images/components/mb_key.png
-  AssetGenImage get mbKeyPng =>
-      const AssetGenImage('assets/images/components/mb_key.png');
-
-  /// File path: assets/images/components/mb_space.afdesign
-  String get mbSpaceAfdesign => 'assets/images/components/mb_space.afdesign';
-
-  /// File path: assets/images/components/mb_space.png
-  AssetGenImage get mbSpacePng =>
-      const AssetGenImage('assets/images/components/mb_space.png');
-
   /// File path: assets/images/components/space.png
   AssetGenImage get space =>
       const AssetGenImage('assets/images/components/space.png');
 
   /// List of all assets
   List<dynamic> get values =>
-      [key, mbKeyAfdesign, mbKeyPng, mbSpaceAfdesign, mbSpacePng, space];
-}
-
-class $AssetsImagesLoadingGameGen {
-  const $AssetsImagesLoadingGameGen();
-
-  /// File path: assets/images/loading_game/io_pinball.png
-  AssetGenImage get ioPinball =>
-      const AssetGenImage('assets/images/loading_game/io_pinball.png');
-
-  /// File path: assets/images/loading_game/mb_io_pinball.afdesign
-  String get mbIoPinballAfdesign =>
-      'assets/images/loading_game/mb_io_pinball.afdesign';
-
-  /// File path: assets/images/loading_game/mb_io_pinball.png
-  AssetGenImage get mbIoPinballPng =>
-      const AssetGenImage('assets/images/loading_game/mb_io_pinball.png');
-
-  /// List of all assets
-  List<dynamic> get values => [ioPinball, mbIoPinballAfdesign, mbIoPinballPng];
+      [key, space];
 }
 
 class $AssetsImagesScoreGen {
