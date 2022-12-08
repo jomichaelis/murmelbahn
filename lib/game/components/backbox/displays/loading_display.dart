@@ -9,7 +9,7 @@ final _bodyTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 3,
     color: PinballColors.white,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
   ),
 );
 
