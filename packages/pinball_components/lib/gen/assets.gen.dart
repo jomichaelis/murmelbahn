@@ -383,17 +383,17 @@ class $AssetsImagesAndroidRampGen {
   AssetGenImage get boardOpening =>
       const AssetGenImage('assets/images/android/ramp/board_opening.png');
 
-  /// File path: assets/images/android/ramp/main.png
-  AssetGenImage get main =>
-      const AssetGenImage('assets/images/android/ramp/main.png');
+  /// File path: assets/images/android/ramp/bridge.png
+  AssetGenImage get bridge =>
+      const AssetGenImage('assets/images/android/ramp/bridge.png');
 
-  /// File path: assets/images/android/ramp/railing_background.png
-  AssetGenImage get railingBackground =>
-      const AssetGenImage('assets/images/android/ramp/railing_background.png');
+  /// File path: assets/images/android/ramp/bridge_foreground.png
+  AssetGenImage get bridgeForeground =>
+      const AssetGenImage('assets/images/android/ramp/bridge_foreground.png');
 
-  /// File path: assets/images/android/ramp/railing_foreground.png
-  AssetGenImage get railingForeground =>
-      const AssetGenImage('assets/images/android/ramp/railing_foreground.png');
+  /// File path: assets/images/android/ramp/bridge_background.png
+  AssetGenImage get bridgeBackground =>
+      const AssetGenImage('assets/images/android/ramp/bridge_background.png');
 }
 
 class $AssetsImagesAndroidSpaceshipGen {
