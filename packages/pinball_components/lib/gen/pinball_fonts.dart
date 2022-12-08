@@ -11,4 +11,7 @@ class PinballFonts {
 
   /// Sans variation of the Pixeloid font
   static const String pixeloidSans = '$_fontPath/${FontFamily.pixeloidSans}';
+
+  /// Sans variation of the Pixeloid font
+  static const String chunkfiveEx = '$_fontPath/${FontFamily.chunkfiveEx}';
 }
