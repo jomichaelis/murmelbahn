@@ -9,15 +9,12 @@ class CrtBackground extends BoxDecoration {
   const CrtBackground()
       : super(
           gradient: const LinearGradient(
-            begin: Alignment(1, 0.015),
-            stops: [0.0, 0.5, 0.5, 1],
+            begin: Alignment(1, 2),
+            stops: [0.0, 1],
             colors: [
               PinballColors.darkBlue,
-              PinballColors.darkBlue,
-              PinballColors.crtBackground,
-              PinballColors.crtBackground,
-            ],
-            tileMode: TileMode.repeated,
+              PinballColors.orange,
+            ]
           ),
         );
 }
