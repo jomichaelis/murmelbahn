@@ -158,6 +158,6 @@ class _AndroidBumperSpriteGroupComponent
           Sprite(gameRef.images.fromCache(_dimmedAssetPath)),
     };
     this.sprites = sprites;
-    size = sprites[current]!.originalSize / 10;
+    size = sprites[current]!.originalSize / 8;
   }
 }

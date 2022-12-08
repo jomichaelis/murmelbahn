@@ -2,8 +2,8 @@ import 'package:flame/components.dart';
 import 'package:pinball_components/pinball_components.dart';
 
 /// {@template android_bumper_blinking_behavior}
-/// Makes an [AndroidBumper] blink back to [AndroidBumperState.lit] when
-/// [AndroidBumperState.dimmed].
+/// Makes an [AndroidBumper] blink back to [AndroidBumperState.dimmed] when
+/// [AndroidBumperState.lit].
 /// {@endtemplate}
 class AndroidBumperBlinkingBehavior extends TimerComponent
     with ParentIsA<AndroidBumper> {
@@ -12,9 +12,9 @@ class AndroidBumperBlinkingBehavior extends TimerComponent
 
   void _onNewState(AndroidBumperState state) {
     switch (state) {
-      case AndroidBumperState.lit:
-        break;
       case AndroidBumperState.dimmed:
+        break;
+      case AndroidBumperState.lit:
         timer
           ..reset()
           ..start();
