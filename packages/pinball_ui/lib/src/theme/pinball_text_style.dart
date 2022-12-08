@@ -3,7 +3,7 @@ import 'package:pinball_ui/gen/fonts.gen.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 const _fontPackage = 'pinball_components';
-const _primaryFontFamily = FontFamily.pixeloidSans;
+const _primaryFontFamily = FontFamily.chunkfiveEx;
 
 /// Different [TextStyle] used in the game
 abstract class PinballTextStyle {
