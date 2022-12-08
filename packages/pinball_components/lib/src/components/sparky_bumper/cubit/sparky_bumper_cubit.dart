@@ -3,13 +3,13 @@ import 'package:bloc/bloc.dart';
 part 'sparky_bumper_state.dart';
 
 class SparkyBumperCubit extends Cubit<SparkyBumperState> {
-  SparkyBumperCubit() : super(SparkyBumperState.lit);
+  SparkyBumperCubit() : super(SparkyBumperState.dimmed);
 
   void onBallContacted() {
-    emit(SparkyBumperState.dimmed);
+    emit(SparkyBumperState.lit);
   }
 
   void onBlinked() {
-    emit(SparkyBumperState.lit);
+    emit(SparkyBumperState.dimmed);
   }
 }

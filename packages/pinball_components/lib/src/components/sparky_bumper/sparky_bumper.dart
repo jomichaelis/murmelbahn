@@ -158,6 +158,6 @@ class _SparkyBumperSpriteGroupComponent
       ),
     };
     this.sprites = sprites;
-    size = sprites[current]!.originalSize / 10;
+    size = sprites[current]!.originalSize / 6.5;
   }
 }

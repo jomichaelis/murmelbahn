@@ -2,8 +2,8 @@ import 'package:flame/components.dart';
 import 'package:pinball_components/pinball_components.dart';
 
 /// {@template sparky_bumper_blinking_behavior}
-/// Makes a [SparkyBumper] blink back to [SparkyBumperState.lit] when
-/// [SparkyBumperState.dimmed].
+/// Makes a [SparkyBumper] blink back to [SparkyBumperState.dimmed] when
+/// [SparkyBumperState.lit].
 /// {@endtemplate}
 class SparkyBumperBlinkingBehavior extends TimerComponent
     with ParentIsA<SparkyBumper> {
@@ -12,9 +12,9 @@ class SparkyBumperBlinkingBehavior extends TimerComponent
 
   void _onNewState(SparkyBumperState state) {
     switch (state) {
-      case SparkyBumperState.lit:
-        break;
       case SparkyBumperState.dimmed:
+        break;
+      case SparkyBumperState.lit:
         timer
           ..reset()
           ..start();
