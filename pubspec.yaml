@@ -94,7 +94,6 @@ flutter:
     - assets/images/components/
     - assets/images/bonus_animation/
     - assets/images/score/
-    - assets/images/loading_game/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
