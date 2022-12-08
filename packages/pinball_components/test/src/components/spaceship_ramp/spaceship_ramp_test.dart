@@ -19,9 +19,9 @@ class _TestGame extends Forge2DGame {
     images.prefix = '';
     await images.loadAll([
       Assets.images.android.ramp.boardOpening.keyName,
-      Assets.images.android.ramp.railingForeground.keyName,
-      Assets.images.android.ramp.railingBackground.keyName,
-      Assets.images.android.ramp.main.keyName,
+      Assets.images.android.ramp.bridgeForeground.keyName,
+      Assets.images.android.ramp.bridgeBackground.keyName,
+      Assets.images.android.ramp.bridge.keyName,
       Assets.images.android.ramp.arrow.inactive.keyName,
       Assets.images.android.ramp.arrow.active1.keyName,
       Assets.images.android.ramp.arrow.active2.keyName,

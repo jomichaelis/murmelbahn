@@ -344,7 +344,8 @@ class _SpaceshipRampBoardOpeningSpriteComponent extends SpriteComponent
       ),
     );
     this.sprite = sprite;
-    size = sprite.originalSize / 10;
+    size = Vector2(0,0);
+    // size = sprite.originalSize / 10;
   }
 }
 
