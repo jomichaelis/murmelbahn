@@ -1,14 +1,14 @@
 {
-  "@@locale": "en",
-  "play": "Play",
+  "@@locale": "de",
+  "play": "Spielen",
   "@play": {
     "description": "Text displayed on the landing page play button"
   },
-  "howToPlay": "How to Play",
+  "howToPlay": "Spielanleitung",
   "@howToPlay": {
     "description": "Text displayed on the landing page how to play button"
   },
-  "tipsForFlips": "Tips for flips",
+  "tipsForFlips": "Steuerung",
   "@tipsForFlips": {
     "description": "Text displayed on the landing page how to play button"
   },
@@ -20,51 +20,35 @@
   "@flipperControls": {
     "description": "Text displayed on the how to play dialog with the flipper controls"
   },
-  "tapAndHoldRocket": "Tap Rocket",
+  "tapAndHoldRocket": "Entpacke den Rucksack",
   "@tapAndHoldRocket": {
     "description": "Text displayed on the how to launch on mobile"
   },
-  "to": "to",
+  "to": "um zu",
   "@to": {
     "description": "Text displayed for the word to"
   },
-  "launch": "LAUNCH",
+  "launch": "STARTEN",
   "@launch": {
     "description": "Text displayed for the word launch"
   },
-  "tapLeftRightScreen": "Tap left/right screen",
+  "tapLeftRightScreen": "Drücke links/rechts",
   "@tapLeftRightScreen": {
     "description": "Text displayed on the how to flip on mobile"
   },
-  "flip": "FLIP",
+  "flip": "FLIPPERN",
   "@flip": {
     "description": "Text displayed for the word FLIP"
   },
-  "start": "Start",
-  "@start": {
-    "description": "Text displayed on the character selection page start button"
-  },
-  "select": "Select",
-  "@select": {
-    "description": "Text displayed on the character selection dialog - select button"
-  },
-  "space": "Space",
+  "space": "Leertaste",
   "@space": {
     "description": "Text displayed on space control button"
   },
-  "characterSelectionTitle": "Select a Character",
-  "@characterSelectionTitle": {
-    "description": "Title text displayed on the character selection dialog"
-  },
-  "characterSelectionSubtitle": "There’s no wrong choice!",
-  "@characterSelectionSubtitle": {
-    "description": "Subtitle text displayed on the character selection dialog"
-  },
-  "gameOver": "Game Over",
+  "gameOver": "Spiel vorbei",
   "@gameOver": {
     "description": "Text displayed on the ending dialog when game finishes"
   },
-  "rounds": "Ball Ct:",
+  "rounds": "Bälle:",
   "@rounds": {
     "description": "Text displayed on the scoreboard widget to indicate rounds left"
   },
@@ -72,15 +56,19 @@
   "@topPlayers": {
     "description": "Title text displayed on leaderboard screen"
   },
-  "rank": "rank",
+  "rank": "Rang",
   "@rank": {
     "description": "Label text displayed above player's rank"
   },
-  "name": "name",
+  "group": "Team",
+  "@group": {
+    "description": "Label text displayed above player's group"
+  },
+  "name": "Spieler",
   "@name": {
     "description": "Label text displayed above player's initials"
   },
-  "score": "score",
+  "score": "Punkte",
   "@score": {
     "description": "Label text displayed above player's score"
   },
@@ -108,7 +96,7 @@
   "@linkBoxTitle": {
     "description": "Text shown on the link box title section."
   },
-  "linkBoxMadeWithText": "Made with ",
+  "linkBoxMadeWithText": "Erstellt mit ",
   "@linkBoxMadeWithText": {
     "description": "Text shown on the link box which mentions technologies used to build the app."
   },
@@ -144,7 +132,7 @@
   "@linkBoxPrivacyPolicy": {
     "description": "Text shown on the link box which redirect to privacy policy"
   },
-  "loading": "Loading",
+  "loading": "Lädt",
   "@loading": {
     "description": "Text shown to indicate loading times"
   },
@@ -196,7 +184,7 @@
   "@initialsErrorMessage": {
     "description": "Message on shown when the initials submission fails"
   },
-  "leaderboardErrorMessage": "No connection. Leaderboard and sharing functionality is unavailable.",
+  "leaderboardErrorMessage": "Keine Verbindung. Rangliste nicht verfügbar.",
   "@leaderboardErrorMessage": {
     "description": "Text shown when the leaderboard had an error while loading"
   }
