@@ -15,11 +15,20 @@ class AssetsLoadingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    final headline1 = Theme.of(context).textTheme.headline1?.copyWith(fontSize: 50);
-    final headline1lower = Theme.of(context).textTheme.headline1?.copyWith(fontSize: 25);
-    final headline2 = Theme.of(context).textTheme.headline2;
+    final headline1 = Theme.of(context).textTheme.headline1?.copyWith(fontSize: 50, color: PinballColors.black);
+    final headline1lower = Theme.of(context).textTheme.headline1?.copyWith(fontSize: 23, color: PinballColors.gray);
+    final headline2 = Theme.of(context).textTheme.headline2?.copyWith(color: PinballColors.darkBlue);
     return Container(
-      decoration: const CrtBackground(),
+      decoration: const BoxDecoration(
+        gradient: const LinearGradient(
+            begin: Alignment(1, 2),
+            stops: [0.0, 1],
+            colors: [
+              PinballColors.darkBlue,
+              PinballColors.yellow,
+            ]
+        ),
+      ),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
