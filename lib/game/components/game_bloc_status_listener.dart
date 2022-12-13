@@ -4,7 +4,6 @@ import 'package:murmelbahn/game/game.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
-import 'package:pinball_theme/pinball_theme.dart';
 
 /// Listens to the [GameBloc] and updates the game accordingly.
 class GameBlocStatusListener extends Component
@@ -35,9 +34,8 @@ class GameBlocStatusListener extends Component
         break;
       case GameStatus.gameOver:
         readProvider<PinballAudioPlayer>().play(PinballAudio.gameOverVoiceOver);
-        gameRef.descendants().whereType<Backbox>().first.requestInitials(
+        gameRef.descendants().whereType<Backbox>().first.requestName(
               score: state.displayScore,
-              character: ScoutTheme(),
             );
         gameRef
             .descendants()

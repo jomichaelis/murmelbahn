@@ -3,18 +3,16 @@ import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flutter/material.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
-import 'package:murmelbahn/leaderboard/models/leader_board_entry.dart';
+import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
-import 'package:pinball_models/pinball_models.dart';
-import 'package:pinball_theme/pinball_theme.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 
 final _titleTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 2,
     color: PinballColors.red,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
   ),
 );
 
@@ -22,13 +20,13 @@ final _bodyTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 1.8,
     color: PinballColors.white,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
   ),
 );
 
 double _calcY(int i) => (i * 3.2) + 3.2;
 
-const _columns = [-14.0, 0.0, 14.0];
+const _columns = [-27.0, -18.0, 0.0, 20.0];
 
 String _rank(int number) {
   switch (number) {
@@ -73,8 +71,7 @@ class LeaderboardDisplay extends PositionComponent with HasGameRef {
           duration: 0.5,
           curve: Curves.easeIn,
         ),
-      ),
-        /*..onFinishCallback = () {
+      )..onComplete = () {
           current.removeFromParent();
           inactiveArrow.active = true;
           firstChild<PositionComponent>()?.add(
@@ -94,7 +91,6 @@ class LeaderboardDisplay extends PositionComponent with HasGameRef {
               ),
           );
         },
-         */
     );
   }
 
@@ -109,13 +105,13 @@ class LeaderboardDisplay extends PositionComponent with HasGameRef {
         position: Vector2(0, 4),
         children: [
           _MovePageArrow(
-            position: Vector2(20, 9),
+            position: Vector2(-31, 9),
             onTap: () {
               _changePage(_entries.sublist(5), 5);
             },
           ),
           _MovePageArrow(
-            position: Vector2(-20, 9),
+            position: Vector2(-31, 9),
             direction: ArrowIconDirection.left,
             active: false,
             onTap: () {
@@ -137,9 +133,15 @@ class LeaderboardDisplay extends PositionComponent with HasGameRef {
                 anchor: Anchor.center,
               ),
               TextComponent(
-                text: l10n.name,
+                text: l10n.group,
                 textRenderer: _titleTextPaint,
                 position: Vector2(_columns[2], 0),
+                anchor: Anchor.center,
+              ),
+              TextComponent(
+                text: l10n.name,
+                textRenderer: _titleTextPaint,
+                position: Vector2(_columns[3], 0),
                 anchor: Anchor.center,
               ),
             ],
@@ -181,18 +183,16 @@ class _RankingPage extends PositionComponent with HasGameRef {
               position: Vector2(_columns[1], _calcY(i)),
               anchor: Anchor.center,
             ),
-            SpriteComponent.fromImage(
-              gameRef.images.fromCache(
-                ScoutTheme().leaderboardIcon.keyName,
-              ),
-              anchor: Anchor.center,
-              size: Vector2(1.8, 1.8),
-              position: Vector2(_columns[2] - 3, _calcY(i) + .25),
-            ),
             TextComponent(
-              text: ranking[i].playerInitials,
+              text: ranking[i].groupName,
               textRenderer: _bodyTextPaint,
               position: Vector2(_columns[2] + 1, _calcY(i)),
+              anchor: Anchor.center,
+            ),
+            TextComponent(
+              text: ranking[i].playerName,
+              textRenderer: _bodyTextPaint,
+              position: Vector2(_columns[3] + 1, _calcY(i)),
               anchor: Anchor.center,
             ),
           ],

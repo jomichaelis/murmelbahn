@@ -1,9 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:murmelbahn/leaderboard/models/leader_board_entry.dart';
-import 'package:pinball_models/pinball_models.dart';
-import 'package:pinball_repository/pinball_repository.dart';
-import 'package:pinball_theme/pinball_theme.dart';
+import 'package:leaderboard_repository/leaderboard_repository.dart';
 
 part 'backbox_event.dart';
 part 'backbox_state.dart';
@@ -14,57 +11,68 @@ part 'backbox_state.dart';
 class BackboxBloc extends Bloc<BackboxEvent, BackboxState> {
   /// {@macro backbox_bloc}
   BackboxBloc({
-    required PinballRepository pinballRepository,
+    required LeaderboardRepository leaderboardRepository,
     required List<LeaderboardEntryData>? initialEntries,
-  })  : _pinballRepository = pinballRepository,
+  })  : _leaderboardRepository = leaderboardRepository,
         super(
           initialEntries != null
               ? LeaderboardSuccessState(entries: initialEntries)
               : LeaderboardFailureState(),
         ) {
-    on<PlayerInitialsRequested>(_onPlayerInitialsRequested);
-    on<PlayerInitialsSubmitted>(_onPlayerInitialsSubmitted);
+    on<PlayerNameRequested>(_onPlayerNameRequested);
+    on<GroupNameRequested>(_onGroupNameRequested);
+    on<PlayerSubmitted>(_onSubmitted);
     on<ShareScoreRequested>(_onScoreShareRequested);
     on<LeaderboardRequested>(_onLeaderboardRequested);
   }
 
-  final PinballRepository _pinballRepository;
+  final LeaderboardRepository _leaderboardRepository;
 
-  void _onPlayerInitialsRequested(
-    PlayerInitialsRequested event,
+  void _onPlayerNameRequested(
+    PlayerNameRequested event,
     Emitter<BackboxState> emit,
   ) {
     emit(
       InitialsFormState(
         score: event.score,
-        character: event.character,
       ),
     );
   }
 
-  Future<void> _onPlayerInitialsSubmitted(
-    PlayerInitialsSubmitted event,
+  void _onGroupNameRequested(
+      GroupNameRequested event,
+      Emitter<BackboxState> emit,
+      ) {
+    emit(
+      InitialsFormState(
+        score: event.score,
+      ),
+    );
+  }
+
+  Future<void> _onSubmitted(
+    PlayerSubmitted event,
     Emitter<BackboxState> emit,
   ) async {
     try {
       emit(LoadingState());
-      await _pinballRepository.addLeaderboardEntry(
+      await _leaderboardRepository.addLeaderboardEntry(
         LeaderboardEntryData(
-          playerInitials: event.initials,
+          playerName: event.playerName,
+          groupName: event.groupName,
           score: event.score,
         ),
       );
       emit(
-        InitialsSuccessState(
+        PlayerSuccessState(
           score: event.score,
         ),
       );
     } catch (error, stackTrace) {
       addError(error, stackTrace);
       emit(
-        InitialsFailureState(
+        PlayerFailureState(
           score: event.score,
-          character: event.character,
         ),
       );
     }
@@ -86,7 +94,7 @@ class BackboxBloc extends Bloc<BackboxEvent, BackboxState> {
     try {
       emit(LoadingState());
 
-      final entries = await _pinballRepository.fetchTop10Leaderboard();
+      final entries = await _leaderboardRepository.fetchTop10Leaderboard();
 
       emit(LeaderboardSuccessState(entries: entries));
     } catch (error, stackTrace) {

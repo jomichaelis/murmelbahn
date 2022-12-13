@@ -2,13 +2,13 @@ import 'package:flame/game.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:murmelbahn/assets_manager/assets_manager.dart';
 import 'package:murmelbahn/game/game.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:murmelbahn/more_information/more_information.dart';
 import 'package:murmelbahn/start_game/start_game.dart';
 import 'package:pinball_audio/pinball_audio.dart';
-import 'package:pinball_repository/pinball_repository.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 import 'package:platform_helper/platform_helper.dart';
 import 'package:share_repository/share_repository.dart';
@@ -24,13 +24,13 @@ class PinballGamePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final audioPlayer = context.read<PinballAudioPlayer>();
-    final pinballRepository = context.read<PinballRepository>();
+    final leaderboardRepository = context.read<LeaderboardRepository>();
     final shareRepository = context.read<ShareRepository>();
     final platformHelper = context.read<PlatformHelper>();
     final gameBloc = context.read<GameBloc>();
     final game = PinballGame(
             audioPlayer: audioPlayer,
-            pinballRepository: pinballRepository,
+            leaderboardRepository: leaderboardRepository,
             shareRepository: shareRepository,
             l10n: context.l10n,
             platformHelper: platformHelper,

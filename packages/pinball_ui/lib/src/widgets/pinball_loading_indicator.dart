@@ -24,8 +24,8 @@ class PinballLoadingIndicator extends StatelessWidget {
       child: Column(
         children: [
           LinearProgressIndicator(
-            backgroundColor: PinballColors.loadingDark,
-            color: PinballColors.loadingLight,
+            backgroundColor: PinballColors.loadingLight,
+            color: PinballColors.darkBlue,
             value: value,
             minHeight: 15,
           ),

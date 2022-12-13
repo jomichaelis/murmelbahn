@@ -7,7 +7,7 @@ final _boldLabelTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 1.8,
     color: PinballColors.white,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
     fontWeight: FontWeight.w700,
   ),
 );
@@ -16,7 +16,7 @@ final _labelTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 1.8,
     color: PinballColors.white,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
     fontWeight: FontWeight.w400,
   ),
 );

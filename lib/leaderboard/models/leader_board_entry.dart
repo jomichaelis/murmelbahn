@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:pinball_models/pinball_models.dart';
+import 'package:leaderboard_repository/leaderboard_repository.dart';
 
 /// {@template leaderboard_entry}
 /// A model representing a leaderboard entry containing the ranking position,
@@ -10,21 +10,25 @@ class LeaderboardEntry extends Equatable {
   /// {@macro leaderboard_entry}
   const LeaderboardEntry({
     required this.rank,
-    required this.playerInitials,
+    required this.playerName,
+    required this.groupName,
     required this.score,
   });
 
   /// Ranking position for [LeaderboardEntry].
   final String rank;
 
-  /// Player's chosen initials for [LeaderboardEntry].
-  final String playerInitials;
+  /// Player's chosen name for [LeaderboardEntry].
+  final String playerName;
+
+  /// Player's chosen groupName for [LeaderboardEntry].
+  final String groupName;
 
   /// Score for [LeaderboardEntry].
   final int score;
 
   @override
-  List<Object?> get props => [rank, playerInitials, score];
+  List<Object?> get props => [rank, playerName, groupName, score];
 }
 
 /// Converts [LeaderboardEntryData] from repository to [LeaderboardEntry].
@@ -33,7 +37,8 @@ extension LeaderboardEntryDataX on LeaderboardEntryData {
   LeaderboardEntry toEntry(int position) {
     return LeaderboardEntry(
       rank: position.toString(),
-      playerInitials: playerInitials,
+      playerName: playerName,
+      groupName: groupName,
       score: score,
     );
   }

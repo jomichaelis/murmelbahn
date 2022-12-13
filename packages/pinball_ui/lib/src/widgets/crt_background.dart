@@ -13,7 +13,7 @@ class CrtBackground extends BoxDecoration {
             stops: [0.0, 1],
             colors: [
               PinballColors.darkBlue,
-              PinballColors.orange,
+              PinballColors.yellow,
             ]
           ),
         );

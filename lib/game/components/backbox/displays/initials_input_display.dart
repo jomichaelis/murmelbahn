@@ -36,7 +36,6 @@ class InitialsInputDisplay extends Component with HasGameRef {
   /// {@macro initials_input_display}
   InitialsInputDisplay({
     required int score,
-    required String characterIconPath,
     InitialsOnSubmit? onSubmit,
   })  : _onSubmit = onSubmit,
         super(
@@ -44,7 +43,6 @@ class InitialsInputDisplay extends Component with HasGameRef {
             _ScoreLabelTextComponent(),
             _ScoreTextComponent(score.formatScore()),
             _NameLabelTextComponent(),
-            _CharacterIconSpriteComponent(characterIconPath),
             _DividerSpriteComponent(),
             _InstructionsComponent(),
           ],
@@ -147,25 +145,6 @@ class _NameLabelTextComponent extends TextComponent {
   Future<void> onLoad() async {
     await super.onLoad();
     text = readProvider<AppLocalizations>().name;
-  }
-}
-
-class _CharacterIconSpriteComponent extends SpriteComponent with HasGameRef {
-  _CharacterIconSpriteComponent(String characterIconPath)
-      : _characterIconPath = characterIconPath,
-        super(
-          anchor: Anchor.center,
-          position: Vector2(7.6, -20),
-        );
-
-  final String _characterIconPath;
-
-  @override
-  Future<void> onLoad() async {
-    await super.onLoad();
-    final sprite = Sprite(gameRef.images.fromCache(_characterIconPath));
-    this.sprite = sprite;
-    size = sprite.originalSize / 20;
   }
 }
 

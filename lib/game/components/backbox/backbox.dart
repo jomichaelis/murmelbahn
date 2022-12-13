@@ -2,15 +2,13 @@ import 'dart:async';
 
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
+import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:murmelbahn/game/components/backbox/bloc/backbox_bloc.dart';
 import 'package:murmelbahn/game/components/backbox/displays/displays.dart';
 import 'package:murmelbahn/game/game.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
-import 'package:pinball_models/pinball_models.dart';
-import 'package:pinball_repository/pinball_repository.dart';
-import 'package:pinball_theme/pinball_theme.dart' hide Assets;
 import 'package:pinball_ui/pinball_ui.dart';
 import 'package:platform_helper/platform_helper.dart';
 import 'package:share_repository/share_repository.dart';
@@ -21,11 +19,11 @@ import 'package:share_repository/share_repository.dart';
 class Backbox extends PositionComponent with ZIndex, HasGameRef {
   /// {@macro backbox}
   Backbox({
-    required PinballRepository pinballRepository,
+    required LeaderboardRepository leaderboardRepository,
     required ShareRepository shareRepository,
     required List<LeaderboardEntryData>? entries,
   })  : _bloc = BackboxBloc(
-          pinballRepository: pinballRepository,
+          leaderboardRepository: leaderboardRepository,
           initialEntries: entries,
         ),
         _shareRepository = shareRepository;
@@ -79,19 +77,18 @@ class Backbox extends PositionComponent with ZIndex, HasGameRef {
       _display.add(
         InitialsInputDisplay(
           score: state.score,
-          characterIconPath: state.character.leaderboardIcon.keyName,
           onSubmit: (initials) {
             _bloc.add(
-              PlayerInitialsSubmitted(
+              PlayerSubmitted(
                 score: state.score,
-                initials: initials,
-                character: state.character,
+                playerName: 'Test',
+                groupName: 'group',
               ),
             );
           },
         ),
       );
-    } else if (state is InitialsSuccessState) {
+    } else if (state is PlayerSuccessState) {
       gameRef.overlays.remove(PinballGame.mobileControlsOverlay);
 
       _display.add(
@@ -115,14 +112,13 @@ class Backbox extends PositionComponent with ZIndex, HasGameRef {
           },
         ),
       );
-    } else if (state is InitialsFailureState) {
+    } else if (state is PlayerFailureState) {
       _display.add(
         InitialsSubmissionFailureDisplay(
           onDismissed: () {
             _bloc.add(
-              PlayerInitialsRequested(
+              PlayerNameRequested(
                 score: state.score,
-                character: state.character,
               ),
             );
           },
@@ -131,15 +127,13 @@ class Backbox extends PositionComponent with ZIndex, HasGameRef {
     }
   }
 
-  /// Puts [InitialsInputDisplay] on the [Backbox].
-  void requestInitials({
+  /// Puts [NameInputDisplay] on the [Backbox].
+  void requestName({
     required int score,
-    required CharacterTheme character,
   }) {
     _bloc.add(
-      PlayerInitialsRequested(
+      PlayerNameRequested(
         score: score,
-        character: character,
       ),
     );
   }

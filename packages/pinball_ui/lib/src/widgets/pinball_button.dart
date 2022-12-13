@@ -35,16 +35,18 @@ class PinballButton extends StatelessWidget {
             highlightColor: PinballColors.transparent,
             splashColor: PinballColors.transparent,
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 32,
-                vertical: 16,
+              padding: const EdgeInsets.only(
+                left: 32,
+                right: 32,
+                top: 16,
+                bottom: 14,
               ),
               child: Text(
                 text,
                 style: Theme.of(context)
                     .textTheme
                     .headline3!
-                    .copyWith(color: PinballColors.white),
+                    .copyWith(fontSize: 22, color: PinballColors.darkBlue),
               ),
             ),
           ),

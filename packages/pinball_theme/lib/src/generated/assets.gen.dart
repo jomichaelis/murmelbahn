@@ -47,9 +47,32 @@ class $AssetsImagesScoutGen {
   AssetGenImage get leaderboardIcon =>
       const AssetGenImage('assets/images/scout/leaderboard_icon.png');
 
+  /// File path: assets/images/scout/mb_background.png
+  AssetGenImage get mbBackground =>
+      const AssetGenImage('assets/images/scout/mb_background.png');
+
+  /// File path: assets/images/scout/mb_ball.blend
+  String get mbBallBlend => 'assets/images/scout/mb_ball.blend';
+
+  /// File path: assets/images/scout/mb_ball.xcf
+  String get mbBallXcf => 'assets/images/scout/mb_ball.xcf';
+
+  /// File path: assets/images/scout/mb_ball_full.png
+  AssetGenImage get mbBallFull =>
+      const AssetGenImage('assets/images/scout/mb_ball_full.png');
+
   /// List of all assets
-  List<AssetGenImage> get values =>
-      [animation, background, ball, icon, leaderboardIcon];
+  List<dynamic> get values => [
+        animation,
+        background,
+        ball,
+        icon,
+        leaderboardIcon,
+        mbBackground,
+        mbBallBlend,
+        mbBallXcf,
+        mbBallFull
+      ];
 }
 
 class Assets {
@@ -83,7 +106,7 @@ class AssetGenImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = false,
     bool isAntiAlias = false,
-    String? package,
+    String? package = 'pinball_theme',
     FilterQuality filterQuality = FilterQuality.low,
     int? cacheWidth,
     int? cacheHeight,
@@ -120,5 +143,5 @@ class AssetGenImage {
 
   String get path => _assetName;
 
-  String get keyName => _assetName;
+  String get keyName => 'packages/pinball_theme/$_assetName';
 }

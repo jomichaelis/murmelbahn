@@ -21,7 +21,7 @@ class BonusNoiseBehavior extends Component {
             case GameBonus.googleWord:
               audioPlayer.play(PinballAudio.google);
               break;
-            case GameBonus.sparkyTurboCharge:
+            case GameBonus.inspiFire:
               audioPlayer.play(PinballAudio.sparky);
               break;
             case GameBonus.dinoChomp:

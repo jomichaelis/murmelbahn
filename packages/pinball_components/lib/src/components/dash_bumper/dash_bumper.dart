@@ -178,6 +178,6 @@ class DashBumperSpriteGroupComponent
     };
     this.sprites = sprites;
     current = DashBumperSpriteState.inactive;
-    size = sprites[current]!.originalSize / 8;
+    size = sprites[current]!.originalSize / 9;
   }
 }

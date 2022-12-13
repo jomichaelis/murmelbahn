@@ -21,9 +21,9 @@ class Flapper extends Component {
             )..initialPosition = Vector2(3.8, -69.3),
             _FlapperStructure(),
             _FlapperExit()..initialPosition = Vector2(-0.8, -33.8),
-            _BackSupportSpriteComponent(),
-            _FrontSupportSpriteComponent(),
-            FlapSpriteAnimationComponent(),
+            // _BackSupportSpriteComponent(),
+            // _FrontSupportSpriteComponent(),
+            // FlapSpriteAnimationComponent(),
           ],
         );
 

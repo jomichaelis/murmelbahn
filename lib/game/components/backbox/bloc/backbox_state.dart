@@ -41,25 +41,21 @@ class InitialsFormState extends BackboxState {
   /// {@macro initials_form_state}
   const InitialsFormState({
     required this.score,
-    required this.character,
   }) : super();
 
   /// Player's score.
   final int score;
 
-  /// Player's character.
-  final CharacterTheme character;
-
   @override
-  List<Object?> get props => [score, character];
+  List<Object?> get props => [score];
 }
 
 /// {@template initials_success_state}
 /// State when the score and initials were successfully submitted.
 /// {@endtemplate}
-class InitialsSuccessState extends BackboxState {
+class PlayerSuccessState extends BackboxState {
   /// {@macro initials_success_state}
-  const InitialsSuccessState({
+  const PlayerSuccessState({
     required this.score,
   }) : super();
 
@@ -71,20 +67,16 @@ class InitialsSuccessState extends BackboxState {
 }
 
 /// State when the initials submission failed.
-class InitialsFailureState extends BackboxState {
-  const InitialsFailureState({
+class PlayerFailureState extends BackboxState {
+  const PlayerFailureState({
     required this.score,
-    required this.character,
   });
 
   /// Player's score.
   final int score;
 
-  /// Player's character.
-  final CharacterTheme character;
-
   @override
-  List<Object?> get props => [score, character];
+  List<Object?> get props => [score];
 }
 
 /// {@template share_state}

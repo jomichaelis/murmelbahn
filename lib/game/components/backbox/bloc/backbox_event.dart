@@ -8,48 +8,64 @@ abstract class BackboxEvent extends Equatable {
   const BackboxEvent();
 }
 
-/// {@template player_initials_requested}
-/// Event that triggers the user initials display.
+/// {@template player_name_requested}
+/// Event that triggers the user name display.
 /// {@endtemplate}
-class PlayerInitialsRequested extends BackboxEvent {
-  /// {@macro player_initials_requested}
-  const PlayerInitialsRequested({
+class PlayerNameRequested extends BackboxEvent {
+  /// {@macro player_name_requested}
+  const PlayerNameRequested({
     required this.score,
-    required this.character,
   });
 
   /// Player's score.
   final int score;
 
-  /// Player's character.
-  final CharacterTheme character;
-
   @override
-  List<Object?> get props => [score, character];
+  List<Object?> get props => [score];
 }
 
-/// {@template player_initials_submitted}
-/// Event that submits the user score and initials.
+/// {@template group_name_requested}
+/// Event that triggers the user group display.
 /// {@endtemplate}
-class PlayerInitialsSubmitted extends BackboxEvent {
-  /// {@macro player_initials_submitted}
-  const PlayerInitialsSubmitted({
+class GroupNameRequested extends BackboxEvent {
+  /// {@macro group_name_requested}
+  const GroupNameRequested({
     required this.score,
-    required this.initials,
-    required this.character,
+    required this.playerName,
   });
 
   /// Player's score.
   final int score;
 
-  /// Player's initials.
-  final String initials;
-
-  /// Player's character.
-  final CharacterTheme character;
+  /// Player's name.
+  final String playerName;
 
   @override
-  List<Object?> get props => [score, initials, character];
+  List<Object?> get props => [score, playerName];
+}
+
+/// {@template submitted}
+/// Event that submits the user score, playerName and groupName.
+/// {@endtemplate}
+class PlayerSubmitted extends BackboxEvent {
+  /// {@macro submitted}
+  const PlayerSubmitted({
+    required this.score,
+    required this.playerName,
+    required this.groupName,
+  });
+
+  /// Player's score.
+  final int score;
+
+  /// Player's name.
+  final String playerName;
+
+  /// Player's group.
+  final String groupName;
+
+  @override
+  List<Object?> get props => [score, playerName, groupName];
 }
 
 /// {@template share_score_requested}

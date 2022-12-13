@@ -38,13 +38,13 @@ class $AssetsImagesBonusAnimationGen {
   AssetGenImage get googleWord =>
       const AssetGenImage('assets/images/bonus_animation/google_word.png');
 
-  /// File path: assets/images/bonus_animation/sparky_turbo_charge.png
-  AssetGenImage get sparkyTurboCharge => const AssetGenImage(
-      'assets/images/bonus_animation/sparky_turbo_charge.png');
+  /// File path: assets/images/bonus_animation/inspi_fire.png
+  AssetGenImage get inspiFire => const AssetGenImage(
+      'assets/images/bonus_animation/inspi_fire.png');
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [androidSpaceship, dashNest, dinoChomp, googleWord, sparkyTurboCharge];
+      [androidSpaceship, dashNest, dinoChomp, googleWord, inspiFire];
 }
 
 class $AssetsImagesComponentsGen {
@@ -66,22 +66,12 @@ class $AssetsImagesComponentsGen {
 class $AssetsImagesScoreGen {
   const $AssetsImagesScoreGen();
 
-  /// File path: assets/images/score/mb_mini_score_background.afdesign
-  String get mbMiniScoreBackgroundAfdesign =>
-      'assets/images/score/mb_mini_score_background.afdesign';
-
-  /// File path: assets/images/score/mb_mini_score_background.png
-  AssetGenImage get mbMiniScoreBackgroundPng =>
-      const AssetGenImage('assets/images/score/mb_mini_score_background.png');
-
   /// File path: assets/images/score/mini_score_background.png
   AssetGenImage get miniScoreBackground =>
       const AssetGenImage('assets/images/score/mini_score_background.png');
 
   /// List of all assets
   List<dynamic> get values => [
-        mbMiniScoreBackgroundAfdesign,
-        mbMiniScoreBackgroundPng,
         miniScoreBackground
       ];
 }

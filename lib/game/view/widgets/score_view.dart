@@ -59,8 +59,8 @@ class _ScoreDisplay extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(
-                l10n.score.toLowerCase(),
-                style: Theme.of(context).textTheme.subtitle1,
+                l10n.score,
+                style: Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 12),
               ),
               const _ScoreText(),
               const RoundCountDisplay(),
@@ -79,9 +79,12 @@ class _ScoreText extends StatelessWidget {
   Widget build(BuildContext context) {
     final score = context.select((GameBloc bloc) => bloc.state.displayScore);
 
-    return Text(
-      score.formatScore(),
-      style: Theme.of(context).textTheme.headline1,
+    return Padding(
+      padding: EdgeInsets.only(top: 3.0, bottom: 3.0),
+      child: Text(
+        score.formatScore(),
+        style: Theme.of(context).textTheme.headline1?.copyWith(fontSize: 24),
+      )
     );
   }
 }

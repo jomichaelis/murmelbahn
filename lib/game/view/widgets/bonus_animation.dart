@@ -27,12 +27,12 @@ class BonusAnimation extends StatefulWidget {
           key: key,
         );
 
-  /// [Widget] that displays the sparky turbo charge animation.
-  BonusAnimation.sparkyTurboCharge({
+  /// [Widget] that displays the inspi fire turbo charge animation.
+  BonusAnimation.inspiFire({
     Key? key,
     VoidCallback? onCompleted,
   }) : this._(
-          Assets.images.bonusAnimation.sparkyTurboCharge.keyName,
+          Assets.images.bonusAnimation.inspiFire.keyName,
           onCompleted: onCompleted,
           key: key,
         );
@@ -77,7 +77,7 @@ class BonusAnimation extends StatefulWidget {
     return [
       () => Flame.images.load(Assets.images.bonusAnimation.dashNest.keyName),
       () => Flame.images
-          .load(Assets.images.bonusAnimation.sparkyTurboCharge.keyName),
+          .load(Assets.images.bonusAnimation.inspiFire.keyName),
       () => Flame.images.load(Assets.images.bonusAnimation.dinoChomp.keyName),
       () => Flame.images
           .load(Assets.images.bonusAnimation.androidSpaceship.keyName),
@@ -124,11 +124,11 @@ class _BonusAnimationState extends State<BonusAnimation>
     final spriteSheet = SpriteSheet.fromColumnsAndRows(
       image: Flame.images.fromCache(widget._imagePath),
       columns: 8,
-      rows: 9,
+      rows: 12,
     );
     animation = spriteSheet.createAnimation(
       row: 0,
-      stepTime: 1 / 12,
+      stepTime: 1 / 24,
       to: spriteSheet.rows * spriteSheet.columns,
       loop: false,
     );

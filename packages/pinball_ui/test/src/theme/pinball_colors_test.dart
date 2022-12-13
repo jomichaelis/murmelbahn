@@ -44,10 +44,6 @@ void main() {
       expect(PinballColors.loadingLight, const Color(0xFFCECECE));
     });
 
-    test('loadingLightBlue is 0xFF6CCAE4', () {
-      expect(PinballColors.loadingLightBlue, const Color(0xFF6CCAE4));
-    });
-
     test('crtBackground is 0xFF274E54', () {
       expect(PinballColors.crtBackground, const Color(0xFF274E54));
     });
