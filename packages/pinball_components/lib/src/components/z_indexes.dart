@@ -68,7 +68,7 @@ abstract class ZIndexes {
 
   static const flutterForest = _above + ballOnBoard;
 
-  // Sparky Scorch
+  // Inspi Kitchen
 
   static const computerBase = _below + ballOnBoard;
 
@@ -76,9 +76,9 @@ abstract class ZIndexes {
 
   static const computerGlow = _above + computerTop;
 
-  static const sparkyAnimatronic = _above + spaceshipRampForegroundRailing;
+  static const inspiAnimatronic = _above + spaceshipRampForegroundRailing;
 
-  static const sparkyBumper = _above + ballOnBoard;
+  static const inspiBumper = _above + ballOnBoard;
 
   static const turboChargeFlame = _above + ballOnBoard;
 
@@ -94,7 +94,7 @@ abstract class ZIndexes {
 
   static const androidHead = _above + ballOnSpaceship;
 
-  static const spaceshipRamp = _above + sparkyBumper;
+  static const spaceshipRamp = _above + inspiBumper;
 
   static const spaceshipRampBackgroundRailing = _above + spaceshipRamp;
 
@@ -108,7 +108,7 @@ abstract class ZIndexes {
 
   // Score
 
-  static const score = _above + sparkyAnimatronic;
+  static const score = _above + inspiAnimatronic;
 
   // Debug information
 

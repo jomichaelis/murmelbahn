@@ -10,7 +10,7 @@ void main() {
   addEffectsStories(dashbook);
   addErrorComponentStories(dashbook);
   addFlutterForestStories(dashbook);
-  addSparkyScorchStories(dashbook);
+  addInspiScorchStories(dashbook);
   addAndroidAcresStories(dashbook);
   addDinoDesertStories(dashbook);
   addBottomGroupStories(dashbook);

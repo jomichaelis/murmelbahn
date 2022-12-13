@@ -98,19 +98,19 @@ extension PinballGameAssetsX on PinballGame {
           images.load(components.Assets.images.android.bumper.cow.lit.keyName),
       () => images
           .load(components.Assets.images.android.bumper.cow.dimmed.keyName),
-      () => images.load(components.Assets.images.sparky.computer.top.keyName),
-      () => images.load(components.Assets.images.sparky.computer.base.keyName),
-      () => images.load(components.Assets.images.sparky.computer.glow.keyName),
-      () => images.load(components.Assets.images.sparky.animatronic.keyName),
-      () => images.load(components.Assets.images.sparky.bumper.a.lit.keyName),
+      () => images.load(components.Assets.images.inspi.fire.top.keyName),
+      () => images.load(components.Assets.images.inspi.fire.base.keyName),
+      () => images.load(components.Assets.images.inspi.fire.glow.keyName),
+      () => images.load(components.Assets.images.inspi.animatronic.keyName),
+      () => images.load(components.Assets.images.inspi.bumper.a.lit.keyName),
       () =>
-          images.load(components.Assets.images.sparky.bumper.a.dimmed.keyName),
-      () => images.load(components.Assets.images.sparky.bumper.b.lit.keyName),
+          images.load(components.Assets.images.inspi.bumper.a.dimmed.keyName),
+      () => images.load(components.Assets.images.inspi.bumper.b.lit.keyName),
       () =>
-          images.load(components.Assets.images.sparky.bumper.b.dimmed.keyName),
-      () => images.load(components.Assets.images.sparky.bumper.c.lit.keyName),
+          images.load(components.Assets.images.inspi.bumper.b.dimmed.keyName),
+      () => images.load(components.Assets.images.inspi.bumper.c.lit.keyName),
       () =>
-          images.load(components.Assets.images.sparky.bumper.c.dimmed.keyName),
+          images.load(components.Assets.images.inspi.bumper.c.dimmed.keyName),
       () => images.load(components.Assets.images.backbox.marquee.keyName),
       () =>
           images.load(components.Assets.images.backbox.displayDivider.keyName),

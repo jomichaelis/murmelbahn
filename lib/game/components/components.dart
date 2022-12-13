@@ -6,7 +6,7 @@ export 'drain/drain.dart';
 export 'flutter_forest/flutter_forest.dart';
 export 'game_bloc_status_listener.dart';
 export 'google_gallery/google_gallery.dart';
+export 'inspi_scorch/inspi_scorch.dart';
 export 'launcher.dart';
 export 'multiballs/multiballs.dart';
 export 'multipliers/multipliers.dart';
-export 'sparky_scorch/sparky_scorch.dart';
