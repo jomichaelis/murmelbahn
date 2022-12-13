@@ -31,12 +31,12 @@ class SparkyAnimatronic extends SpriteAnimationComponent
       spriteSheet.width / amountPerRow,
       spriteSheet.height / amountPerColumn,
     );
-    size = textureSize / 10;
+    size = textureSize / 12;
 
     animation = SpriteAnimation.fromFrameData(
       spriteSheet,
       SpriteAnimationData.sequenced(
-        amount: (amountPerRow * amountPerColumn) - 1,
+        amount: amountPerRow * amountPerColumn,
         amountPerRow: amountPerRow,
         stepTime: 1 / 24,
         textureSize: textureSize,
