@@ -8,8 +8,8 @@ enum GameBonus {
   /// Bonus achieved when the user activates all dash bumpers.
   dashNest,
 
-  /// Bonus achieved when a ball enters Sparky's computer.
-  sparkyTurboCharge,
+  /// Bonus achieved when a ball enters Inspi's fire.
+  inspiFire,
 
   /// Bonus achieved when the ball goes in the dino mouth.
   dinoChomp,
