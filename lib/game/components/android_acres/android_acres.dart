@@ -42,7 +42,6 @@ class AndroidAcres extends Component {
               children: [
                 ScoringContactBehavior(points: Points.twentyThousand),
                 BumperNoiseBehavior(),
-                CowBumperNoiseBehavior(),
               ],
             )..initialPosition = Vector2(-20.7, -13),
             FlameBlocProvider<AndroidSpaceshipCubit, AndroidSpaceshipState>(
