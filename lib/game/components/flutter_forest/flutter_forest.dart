@@ -55,7 +55,7 @@ class FlutterForest extends Component with ZIndex {
                   children: [
                     AnimatronicLoopingBehavior(animationCoolDown: 11),
                   ],
-                )..position = Vector2(20, -66),
+                )..position = Vector2(18.6, -65),
                 FlutterForestBonusBehavior(),
               ],
             ),
