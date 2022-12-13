@@ -30,7 +30,10 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   bloc: ^8.1.0
+  cloud_firestore: ^4.1.0
   equatable: ^2.0.5
+  firebase_auth: ^4.1.5
+  firebase_core: ^2.3.0
   flame: ^1.5.0
   flame_bloc: ^1.8.1
   flame_forge2d:
@@ -45,21 +48,17 @@ dependencies:
     sdk: flutter
   geometry:
     path: packages/geometry
-  http_pinball_api:
-    path: packages/http_pinball_api
   intl: ^0.17.0
-  pinball_api:
-    path: packages/pinball_api
+  authentication_repository:
+    path: packages/authentication_repository
+  leaderboard_repository:
+    path: packages/leaderboard_repository
   pinball_audio:
     path: packages/pinball_audio
   pinball_components:
     path: packages/pinball_components
   pinball_flame:
     path: packages/pinball_flame
-  pinball_models:
-    path: packages/pinball_models
-  pinball_repository:
-    path: packages/pinball_repository
   pinball_theme:
     path: packages/pinball_theme
   pinball_ui:
@@ -75,6 +74,7 @@ dev_dependencies:
   flame_test: ^1.9.1
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.11.0
   mocktail: ^0.3.0
 
 # For information on the generic Dart part of this file, see the
