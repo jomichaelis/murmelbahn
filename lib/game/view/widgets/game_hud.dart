@@ -91,7 +91,7 @@ class _ScoreViewDecoration extends StatelessWidget {
         image: DecorationImage(
           fit: BoxFit.cover,
           image: AssetImage(
-            Assets.images.score.mbMiniScoreBackgroundPng.path,
+            Assets.images.score.miniScoreBackground.path,
           ),
         ),
       ),
@@ -122,8 +122,8 @@ class _AnimationView extends StatelessWidget {
     switch (lastBonus) {
       case GameBonus.dashNest:
         return BonusAnimation.dashNest(onCompleted: onComplete);
-      case GameBonus.sparkyTurboCharge:
-        return BonusAnimation.sparkyTurboCharge(onCompleted: onComplete);
+      case GameBonus.inspiFire:
+        return BonusAnimation.inspiFire(onCompleted: onComplete);
       case GameBonus.dinoChomp:
         return BonusAnimation.dinoChomp(onCompleted: onComplete);
       case GameBonus.googleWord:
