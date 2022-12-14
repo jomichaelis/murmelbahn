@@ -15,6 +15,9 @@ abstract class AssetsGame extends Forge2DGame {
   final List<String>? _imagesFileNames;
 
   @override
+  Color backgroundColor() => Colors.white;
+
+  @override
   Future<void> onLoad() async {
     await super.onLoad();
     if (_imagesFileNames != null) {

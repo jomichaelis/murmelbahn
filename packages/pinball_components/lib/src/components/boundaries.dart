@@ -11,7 +11,7 @@ class Boundaries extends Component {
   Boundaries()
       : super(
           children: [
-            _BottomBoundary(),
+            _BottomBoundary()..initialPosition = Vector2(-0.14, 0.2),
             _OuterBoundary(),
             _OuterBottomBoundarySpriteComponent(),
           ],

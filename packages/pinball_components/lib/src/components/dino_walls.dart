@@ -7,7 +7,7 @@ import 'package:pinball_components/pinball_components.dart' hide Assets;
 import 'package:pinball_flame/pinball_flame.dart';
 
 /// {@template dino_walls}
-/// Walls near the [ChromeDino].
+/// Walls near the [JurteBumper].
 /// {@endtemplate}
 class DinoWalls extends Component {
   /// {@macro dino_walls}
@@ -21,9 +21,9 @@ class DinoWalls extends Component {
 }
 
 /// {@template dino_top_wall}
-/// Wall segment located above [ChromeDino].
+/// Wall segment located above [JurteBumper].
 /// {@endtemplate}
-class _DinoTopWall extends BodyComponent with InitialPosition {
+class _DinoTopWall extends BodyComponent with InitialPosition, ZIndex {
   ///{@macro dino_top_wall}
   _DinoTopWall()
       : super(
@@ -31,52 +31,52 @@ class _DinoTopWall extends BodyComponent with InitialPosition {
             _DinoTopWallSpriteComponent(),
             _DinoTopWallTunnelSpriteComponent(),
           ],
-          renderBody: false,
+          renderBody: true,
         );
 
   List<FixtureDef> _createFixtureDefs() {
     final topEdgeShape = EdgeShape()
       ..set(
-        Vector2(29.05, -35.27),
-        Vector2(28.2, -34.77),
+        Vector2(29.55, -40.97),
+        Vector2(28.2, -40.77),
       );
 
     final topCurveShape = BezierCurveShape(
       controlPoints: [
         topEdgeShape.vertex2,
-        Vector2(21.15, -28.72),
-        Vector2(23.25, -24.62),
+        Vector2(22.15, -32.72),
+        Vector2(22.45, -27.62),
       ],
     );
 
     final tunnelTopEdgeShape = EdgeShape()
       ..set(
         topCurveShape.vertices.last,
-        Vector2(30.15, -27.32),
+        Vector2(30.15, -31.32),
       );
 
     final tunnelBottomEdgeShape = EdgeShape()
       ..set(
-        Vector2(30.55, -23.17),
-        Vector2(25.25, -21.22),
+        Vector2(30.55, -27.17),
+        Vector2(24.65, -24.22),
       );
 
     final middleEdgeShape = EdgeShape()
       ..set(
         tunnelBottomEdgeShape.vertex2,
-        Vector2(27.25, -19.32),
+        Vector2(25.25, -21.32),
       );
 
     final bottomEdgeShape = EdgeShape()
       ..set(
         middleEdgeShape.vertex2,
-        Vector2(24.45, -15.02),
+        Vector2(24, -19.02),
       );
 
     final undersideEdgeShape = EdgeShape()
       ..set(
         bottomEdgeShape.vertex2,
-        Vector2(31.55, -13.77),
+        Vector2(30.78, -17.77),
       );
 
     return [
@@ -108,9 +108,9 @@ class _DinoTopWallSpriteComponent extends SpriteComponent
     with HasGameRef, ZIndex {
   _DinoTopWallSpriteComponent()
       : super(
-          position: Vector2(22.55, -38.07),
+          position: Vector2(21.85, -41.07),
         ) {
-    zIndex = ZIndexes.dinoTopWall;
+    zIndex = ZIndexes.jurteAreaTopWall;
   }
 
   @override
@@ -118,7 +118,7 @@ class _DinoTopWallSpriteComponent extends SpriteComponent
     await super.onLoad();
     final sprite = Sprite(
       gameRef.images.fromCache(
-        Assets.images.dino.topWall.keyName,
+        Assets.images.jurteArea.topWall.keyName,
       ),
     );
     this.sprite = sprite;
@@ -129,8 +129,8 @@ class _DinoTopWallSpriteComponent extends SpriteComponent
 class _DinoTopWallTunnelSpriteComponent extends SpriteComponent
     with HasGameRef, ZIndex {
   _DinoTopWallTunnelSpriteComponent()
-      : super(position: Vector2(23.11, -26.01)) {
-    zIndex = ZIndexes.dinoTopWallTunnel;
+      : super(position: Vector2(22.41, -29.01)) {
+    zIndex = ZIndexes.jurteAreaTopWallTunnel;
   }
 
   @override
@@ -138,7 +138,7 @@ class _DinoTopWallTunnelSpriteComponent extends SpriteComponent
     await super.onLoad();
     final sprite = Sprite(
       gameRef.images.fromCache(
-        Assets.images.dino.topWallTunnel.keyName,
+        Assets.images.jurteArea.topWallTunnel.keyName,
       ),
     );
     this.sprite = sprite;
@@ -147,7 +147,7 @@ class _DinoTopWallTunnelSpriteComponent extends SpriteComponent
 }
 
 /// {@template dino_bottom_wall}
-/// Wall segment located below [ChromeDino].
+/// Wall segment located below [JurteBumper].
 /// {@endtemplate}
 class _DinoBottomWall extends BodyComponent with InitialPosition, ZIndex {
   ///{@macro dino_top_wall}
@@ -156,7 +156,7 @@ class _DinoBottomWall extends BodyComponent with InitialPosition, ZIndex {
           children: [_DinoBottomWallSpriteComponent()],
           renderBody: false,
         ) {
-    zIndex = ZIndexes.dinoBottomWall;
+    zIndex = ZIndexes.jurteAreaBottomWall;
   }
 
   List<FixtureDef> _createFixtureDefs() {
@@ -214,7 +214,7 @@ class _DinoBottomWallSpriteComponent extends SpriteComponent with HasGameRef {
     await super.onLoad();
     final sprite = Sprite(
       gameRef.images.fromCache(
-        Assets.images.dino.bottomWall.keyName,
+        Assets.images.jurteArea.bottomWall.keyName,
       ),
     );
     this.sprite = sprite;

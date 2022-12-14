@@ -37,16 +37,6 @@ class BonusAnimation extends StatefulWidget {
           key: key,
         );
 
-  /// [Widget] that displays the dino chomp animation.
-  BonusAnimation.dinoChomp({
-    Key? key,
-    VoidCallback? onCompleted,
-  }) : this._(
-          Assets.images.bonusAnimation.dinoChomp.keyName,
-          onCompleted: onCompleted,
-          key: key,
-        );
-
   /// [Widget] that displays the android spaceship animation.
   BonusAnimation.androidSpaceship({
     Key? key,
@@ -78,7 +68,6 @@ class BonusAnimation extends StatefulWidget {
       () => Flame.images.load(Assets.images.bonusAnimation.dashNest.keyName),
       () => Flame.images
           .load(Assets.images.bonusAnimation.inspiFire.keyName),
-      () => Flame.images.load(Assets.images.bonusAnimation.dinoChomp.keyName),
       () => Flame.images
           .load(Assets.images.bonusAnimation.androidSpaceship.keyName),
       () => Flame.images.load(Assets.images.bonusAnimation.googleWord.keyName),
@@ -128,7 +117,7 @@ class _BonusAnimationState extends State<BonusAnimation>
     );
     animation = spriteSheet.createAnimation(
       row: 0,
-      stepTime: 1 / 24,
+      stepTime: 1 / 18,
       to: spriteSheet.rows * spriteSheet.columns,
       loop: false,
     );

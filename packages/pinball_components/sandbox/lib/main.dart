@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:sandbox/stories/stories.dart';
 
 void main() {
-  final dashbook = Dashbook(theme: ThemeData.dark());
+  final dashbook = Dashbook(theme: ThemeData.light());
 
   addBallStories(dashbook);
   addLayerStories(dashbook);
@@ -12,7 +12,7 @@ void main() {
   addFlutterForestStories(dashbook);
   addInspiScorchStories(dashbook);
   addAndroidAcresStories(dashbook);
-  addDinoDesertStories(dashbook);
+  addJurteAreaStories(dashbook);
   addBottomGroupStories(dashbook);
   addPlungerStories(dashbook);
   addBoundariesStories(dashbook);
