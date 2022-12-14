@@ -32,12 +32,11 @@ extension PinballGameAssetsX on PinballGame {
       () => images.load(
             components.Assets.images.launchRamp.backgroundRailing.keyName,
           ),
-      () => images.load(components.Assets.images.dino.bottomWall.keyName),
-      () => images.load(components.Assets.images.dino.topWall.keyName),
-      () => images.load(components.Assets.images.dino.topWallTunnel.keyName),
-      () => images.load(components.Assets.images.dino.animatronic.head.keyName),
-      () =>
-          images.load(components.Assets.images.dino.animatronic.mouth.keyName),
+      () => images.load(components.Assets.images.jurteArea.bottomWall.keyName),
+      () => images.load(components.Assets.images.jurteArea.topWall.keyName),
+      () => images.load(components.Assets.images.jurteArea.topWallTunnel.keyName),
+      () => images.load(components.Assets.images.jurteArea.bumper.main.lit.keyName),
+      () => images.load(components.Assets.images.jurteArea.bumper.main.dimmed.keyName),
       () => images.load(components.Assets.images.dash.animatronic.keyName),
       () => images.load(components.Assets.images.dash.bumper.a.active.keyName),
       () =>

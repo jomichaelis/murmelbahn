@@ -18,6 +18,7 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   InspiBumper._({
     required double majorRadius,
     required double minorRadius,
+    required double rotation,
     required String litAssetPath,
     required String dimmedAssetPath,
     required Vector2 spritePosition,
@@ -25,6 +26,7 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
     Iterable<Component>? children,
   })  : _majorRadius = majorRadius,
         _minorRadius = minorRadius,
+        _rotation = rotation,
         super(
           renderBody: false,
           children: [
@@ -46,11 +48,12 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   InspiBumper.a({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 2.9,
-          minorRadius: 2.1,
+          majorRadius: 3.6,
+          minorRadius: 2.2,
+          rotation: math.pi / 2.1,
           litAssetPath: Assets.images.inspi.bumper.a.lit.keyName,
           dimmedAssetPath: Assets.images.inspi.bumper.a.dimmed.keyName,
-          spritePosition: Vector2(0, -0.25),
+          spritePosition: Vector2(0, -0.65),
           bloc: InspiBumperCubit(),
           children: [
             ...?children,
@@ -62,11 +65,12 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   InspiBumper.b({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 2.85,
-          minorRadius: 2,
+          majorRadius: 3.8,
+          minorRadius: 2.4,
+          rotation: math.pi / 2,
           litAssetPath: Assets.images.inspi.bumper.b.lit.keyName,
           dimmedAssetPath: Assets.images.inspi.bumper.b.dimmed.keyName,
-          spritePosition: Vector2(0, -0.35),
+          spritePosition: Vector2(0.1, -0.9),
           bloc: InspiBumperCubit(),
           children: [
             ...?children,
@@ -78,11 +82,12 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   InspiBumper.c({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 3,
+          majorRadius: 3.6,
           minorRadius: 2.2,
+          rotation: math.pi / 1.9,
           litAssetPath: Assets.images.inspi.bumper.c.lit.keyName,
           dimmedAssetPath: Assets.images.inspi.bumper.c.dimmed.keyName,
-          spritePosition: Vector2(0, -0.4),
+          spritePosition: Vector2(0.1, -0.9),
           bloc: InspiBumperCubit(),
           children: [
             ...?children,
@@ -97,10 +102,12 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   InspiBumper.test({
     required this.bloc,
   })  : _majorRadius = 3,
-        _minorRadius = 2.2;
+        _minorRadius = 2.2,
+        _rotation = math.pi / 2.1;
 
   final double _majorRadius;
   final double _minorRadius;
+  final double _rotation;
 
   final InspiBumperCubit bloc;
 
@@ -116,7 +123,7 @@ class InspiBumper extends BodyComponent with InitialPosition, pf.ZIndex {
       center: Vector2.zero(),
       majorRadius: _majorRadius,
       minorRadius: _minorRadius,
-    )..rotate(math.pi / 2.1);
+    )..rotate(_rotation);
     final bodyDef = BodyDef(
       position: initialPosition,
     );

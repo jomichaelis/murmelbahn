@@ -125,7 +125,7 @@ class PinballGame extends PinballForge2DGame
                         ],
                       ),
                       AndroidAcres(),
-                      DinoDesert(),
+                      JurteArea(),
                       FlutterForest(),
                       InspiScorch(),
                       Drain(),

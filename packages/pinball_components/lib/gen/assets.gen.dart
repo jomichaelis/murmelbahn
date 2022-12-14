@@ -21,7 +21,7 @@ class $AssetsImagesGen {
 
   $AssetsImagesBoundaryGen get boundary => const $AssetsImagesBoundaryGen();
   $AssetsImagesDashGen get dash => const $AssetsImagesDashGen();
-  $AssetsImagesDinoGen get dino => const $AssetsImagesDinoGen();
+  $AssetsImagesJurteAreaGen get jurteArea => const $AssetsImagesJurteAreaGen();
 
   $AssetsImagesDisplayArrowsGen get displayArrows =>
       const $AssetsImagesDisplayArrowsGen();
@@ -126,23 +126,22 @@ class $AssetsImagesDashGen {
   $AssetsImagesDashBumperGen get bumper => const $AssetsImagesDashBumperGen();
 }
 
-class $AssetsImagesDinoGen {
-  const $AssetsImagesDinoGen();
+class $AssetsImagesJurteAreaGen {
+  const $AssetsImagesJurteAreaGen();
 
-  $AssetsImagesDinoAnimatronicGen get animatronic =>
-      const $AssetsImagesDinoAnimatronicGen();
+  $AssetsImagesJurteBumperGen get bumper => const $AssetsImagesJurteBumperGen();
 
-  /// File path: assets/images/dino/bottom_wall.png
+  /// File path: assets/images/jurte_area/bottom_wall.png
   AssetGenImage get bottomWall =>
-      const AssetGenImage('assets/images/dino/bottom_wall.png');
+      const AssetGenImage('assets/images/jurte_area/bottom_wall.png');
 
-  /// File path: assets/images/dino/top_wall.png
+  /// File path: assets/images/jurte_area/top_wall.png
   AssetGenImage get topWall =>
-      const AssetGenImage('assets/images/dino/top_wall.png');
+      const AssetGenImage('assets/images/jurte_area/top_wall.png');
 
-  /// File path: assets/images/dino/top_wall_tunnel.png
+  /// File path: assets/images/jurte_area/top_wall_tunnel.png
   AssetGenImage get topWallTunnel =>
-      const AssetGenImage('assets/images/dino/top_wall_tunnel.png');
+      const AssetGenImage('assets/images/jurte_area/top_wall_tunnel.png');
 }
 
 class $AssetsImagesDisplayArrowsGen {
@@ -433,18 +432,6 @@ class $AssetsImagesDashBumperGen {
       const $AssetsImagesDashBumperMainGen();
 }
 
-class $AssetsImagesDinoAnimatronicGen {
-  const $AssetsImagesDinoAnimatronicGen();
-
-  /// File path: assets/images/dino/animatronic/head.png
-  AssetGenImage get head =>
-      const AssetGenImage('assets/images/dino/animatronic/head.png');
-
-  /// File path: assets/images/dino/animatronic/mouth.png
-  AssetGenImage get mouth =>
-      const AssetGenImage('assets/images/dino/animatronic/mouth.png');
-}
-
 class $AssetsImagesGoogleRolloverLeftGen {
   const $AssetsImagesGoogleRolloverLeftGen();
 
@@ -533,6 +520,12 @@ class $AssetsImagesGoogleWordLetter6Gen {
   /// File path: assets/images/google_word/letter6/lit.png
   AssetGenImage get lit =>
       const AssetGenImage('assets/images/google_word/letter6/lit.png');
+}
+
+class $AssetsImagesJurteBumperGen {
+  const $AssetsImagesJurteBumperGen();
+
+  $AssetsImagesJurteBumperMainGen get main => const $AssetsImagesJurteBumperMainGen();
 }
 
 class $AssetsImagesKickerLeftGen {
@@ -777,6 +770,18 @@ class $AssetsImagesInspiBumperCGen {
   /// File path: assets/images/inspi/bumper/c/lit.png
   AssetGenImage get lit =>
       const AssetGenImage('assets/images/inspi/bumper/c/lit.png');
+}
+
+class $AssetsImagesJurteBumperMainGen {
+  const $AssetsImagesJurteBumperMainGen();
+
+  /// File path: assets/images/jurte_area/bumper/main/lit.png
+  AssetGenImage get lit =>
+      const AssetGenImage('assets/images/jurte_area/bumper/main/lit.png');
+
+  /// File path: assets/images/jurte_area/bumper/main/dimmed.png
+  AssetGenImage get dimmed =>
+      const AssetGenImage('assets/images/jurte_area/bumper/main/dimmed.png');
 }
 
 class Assets {

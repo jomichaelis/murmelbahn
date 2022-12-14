@@ -11,9 +11,6 @@ enum GameBonus {
   /// Bonus achieved when a ball enters Inspi's fire.
   inspiFire,
 
-  /// Bonus achieved when the ball goes in the dino mouth.
-  dinoChomp,
-
   /// Bonus achieved when a ball enters the android spaceship.
   androidSpaceship,
 }

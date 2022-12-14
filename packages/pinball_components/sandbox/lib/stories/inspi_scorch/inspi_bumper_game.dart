@@ -27,13 +27,13 @@ class InspiBumperGame extends BallGame {
 
     final center = screenToWorld(camera.viewport.canvasSize! / 2);
     final inspiBumperA = InspiBumper.a()
-      ..initialPosition = Vector2(center.x - 20, center.y + 20)
+      ..initialPosition = Vector2(center.x - 10, center.y + 10)
       ..priority = 1;
     final inspiBumperB = InspiBumper.b()
-      ..initialPosition = Vector2(center.x - 10, center.y - 10)
+      ..initialPosition = Vector2(center.x - 5, center.y - 5)
       ..priority = 1;
     final inspiBumperC = InspiBumper.c()
-      ..initialPosition = Vector2(center.x + 20, center.y)
+      ..initialPosition = Vector2(center.x + 10, center.y)
       ..priority = 1;
     await addAll([
       inspiBumperA,

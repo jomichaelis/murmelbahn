@@ -48,30 +48,42 @@ class InspiFire extends BodyComponent {
   List<FixtureDef> _createFixtureDefs() {
     final leftEdge = EdgeShape()
       ..set(
-        Vector2(-15.3, -45.9),
-        Vector2(-15.7, -49.5),
+        Vector2(-15.8, -45.9),
+        Vector2(-16.6, -48.2),
+      );
+    final leftEdge2 = EdgeShape()
+      ..set(
+        leftEdge.vertex2,
+        Vector2(-15.1, -49.3),
       );
     final topEdge = EdgeShape()
       ..set(
-        leftEdge.vertex2,
-        Vector2(-11.1, -50.5),
+        leftEdge2.vertex2,
+        Vector2(-11.1, -49.6),
+      );
+    final topEdge2 = EdgeShape()
+      ..set(
+        topEdge.vertex2,
+        Vector2(-9.4, -48.5),
       );
     final rightEdge = EdgeShape()
       ..set(
-        topEdge.vertex2,
-        Vector2(-9.4, -47.1),
+        topEdge2.vertex2,
+        Vector2(-9, -46.9),
       );
     final turboChargeSensor = PolygonShape()
       ..setAsBox(
-        1,
+        2.3,
         0.1,
-        Vector2(-13.1, -49.7),
-        -0.18,
+        Vector2(-13.3, -48.5),
+        -.2,
       );
 
     return [
       FixtureDef(leftEdge),
+      FixtureDef(leftEdge2),
       FixtureDef(topEdge),
+      FixtureDef(topEdge2),
       FixtureDef(rightEdge),
       FixtureDef(
         turboChargeSensor,

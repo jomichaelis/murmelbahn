@@ -42,9 +42,6 @@ enum PinballAudio {
   /// Android.
   android,
 
-  /// Dino.
-  dino,
-
   /// Dash.
   dash,
 
@@ -279,12 +276,6 @@ class PinballAudioPlayer {
         preCacheSingleAudio: _preCacheSingleAudio,
         playSingleAudio: _playSingleAudio,
         path: Assets.sfx.sparky,
-      ),
-      PinballAudio.dino: _ThrottledAudio(
-        preCacheSingleAudio: _preCacheSingleAudio,
-        playSingleAudio: _playSingleAudio,
-        path: Assets.sfx.dino,
-        duration: const Duration(seconds: 6),
       ),
       PinballAudio.dash: _SimplePlayAudio(
         preCacheSingleAudio: _preCacheSingleAudio,

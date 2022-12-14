@@ -30,10 +30,6 @@ class $AssetsImagesBonusAnimationGen {
   AssetGenImage get dashNest =>
       const AssetGenImage('assets/images/bonus_animation/dash_nest.png');
 
-  /// File path: assets/images/bonus_animation/dino_chomp.png
-  AssetGenImage get dinoChomp =>
-      const AssetGenImage('assets/images/bonus_animation/dino_chomp.png');
-
   /// File path: assets/images/bonus_animation/google_word.png
   AssetGenImage get googleWord =>
       const AssetGenImage('assets/images/bonus_animation/google_word.png');
@@ -44,7 +40,7 @@ class $AssetsImagesBonusAnimationGen {
 
   /// List of all assets
   List<AssetGenImage> get values =>
-      [androidSpaceship, dashNest, dinoChomp, googleWord, inspiFire];
+      [androidSpaceship, dashNest, googleWord, inspiFire];
 }
 
 class $AssetsImagesComponentsGen {

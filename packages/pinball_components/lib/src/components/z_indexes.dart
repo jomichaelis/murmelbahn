@@ -26,7 +26,7 @@ abstract class ZIndexes {
 
   // Boundaries
 
-  static const bottomBoundary = _above + dinoBottomWall;
+  static const bottomBoundary = _above + jurteAreaBottomWall;
 
   static const outerBoundary = _above + boardBackground;
 
@@ -54,15 +54,15 @@ abstract class ZIndexes {
 
   // Dino Desert
 
-  static const dinoTopWall = _above + ballOnBoard;
+  static const jurteAreaTopWall = _above + ballOnBoard;
 
-  static const dinoTopWallTunnel = _below + ballOnBoard;
+  static const jurteAreaTopWallTunnel = _below + ballOnBoard;
 
-  static const dino = _above + dinoTopWall;
+  static const jurteArea = _above + jurteAreaTopWall;
 
-  static const dinoBottomWall = _above + dino;
+    static const jurteAreaBottomWall = _above + jurteArea;
 
-  static const slingshots = _above + dinoBottomWall;
+  static const slingshots = _above + jurteAreaBottomWall;
 
   // Flutter Forest
 

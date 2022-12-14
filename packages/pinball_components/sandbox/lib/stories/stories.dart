@@ -3,7 +3,7 @@ export 'arrow_icon/stories.dart';
 export 'ball/stories.dart';
 export 'bottom_group/stories.dart';
 export 'boundaries/stories.dart';
-export 'dino_desert/stories.dart';
+export 'jurte_area/stories.dart';
 export 'effects/stories.dart';
 export 'error_component/stories.dart';
 export 'flutter_forest/stories.dart';

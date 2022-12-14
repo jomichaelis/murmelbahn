@@ -31,12 +31,14 @@ class DashBumper extends BodyComponent with InitialPosition {
     required this.id,
     required double majorRadius,
     required double minorRadius,
+    required double rotation,
     required String activeAssetPath,
     required String inactiveAssetPath,
     required Vector2 spritePosition,
     Iterable<Component>? children,
   })  : _majorRadius = majorRadius,
         _minorRadius = minorRadius,
+        _rotation = rotation,
         super(
           renderBody: false,
           children: [
@@ -59,8 +61,9 @@ class DashBumper extends BodyComponent with InitialPosition {
     Iterable<Component>? children,
   }) : this._(
           id: DashBumperId.main,
-          majorRadius: 5.1,
-          minorRadius: 3.75,
+          majorRadius: 5.8,
+          minorRadius: 3.58,
+          rotation: 1.6,
           activeAssetPath: Assets.images.dash.bumper.main.active.keyName,
           inactiveAssetPath: Assets.images.dash.bumper.main.inactive.keyName,
           spritePosition: Vector2(0, -0.3),
@@ -78,11 +81,12 @@ class DashBumper extends BodyComponent with InitialPosition {
     Iterable<Component>? children,
   }) : this._(
           id: DashBumperId.a,
-          majorRadius: 3,
-          minorRadius: 2.2,
+          majorRadius: 3.9,
+          minorRadius: 2.4,
+          rotation: 1.44,
           activeAssetPath: Assets.images.dash.bumper.a.active.keyName,
           inactiveAssetPath: Assets.images.dash.bumper.a.inactive.keyName,
-          spritePosition: Vector2(0.3, -1.3),
+          spritePosition: Vector2(0, -1.2),
           children: [
             ...?children,
             BumpingBehavior(strength: 20),
@@ -97,11 +101,12 @@ class DashBumper extends BodyComponent with InitialPosition {
     Iterable<Component>? children,
   }) : this._(
           id: DashBumperId.b,
-          majorRadius: 3.1,
-          minorRadius: 2.2,
+          majorRadius: 3.9,
+          minorRadius: 2.4,
+          rotation: 1.6,
           activeAssetPath: Assets.images.dash.bumper.b.active.keyName,
           inactiveAssetPath: Assets.images.dash.bumper.b.inactive.keyName,
-          spritePosition: Vector2(0.4, -1.2),
+          spritePosition: Vector2(0.2, -1.2),
           children: [
             ...?children,
             BumpingBehavior(strength: 20),
@@ -114,11 +119,13 @@ class DashBumper extends BodyComponent with InitialPosition {
   @visibleForTesting
   DashBumper.test({required this.id})
       : _majorRadius = 3,
-        _minorRadius = 2.5;
+        _minorRadius = 2.5,
+        _rotation = 1.6;
 
   final DashBumperId id;
   final double _majorRadius;
   final double _minorRadius;
+  final double _rotation;
 
   @override
   Body createBody() {
@@ -126,7 +133,7 @@ class DashBumper extends BodyComponent with InitialPosition {
       center: Vector2.zero(),
       majorRadius: _majorRadius,
       minorRadius: _minorRadius,
-    )..rotate(math.pi / 1.9);
+    )..rotate(_rotation);
     final bodyDef = BodyDef(
       position: initialPosition,
     );

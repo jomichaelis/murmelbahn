@@ -56,8 +56,9 @@ flutter:
     - assets/images/ball/
     - assets/images/baseboard/
     - assets/images/boundary/
-    - assets/images/dino/
-    - assets/images/dino/animatronic/
+    - assets/images/jurte_area/
+    - assets/images/jurte_area/bumper/
+    - assets/images/jurte_area/bumper/main/
     - assets/images/flipper/
     - assets/images/launch_ramp/
     - assets/images/dash/

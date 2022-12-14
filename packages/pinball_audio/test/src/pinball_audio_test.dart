@@ -196,10 +196,6 @@ void main() {
         ).called(1);
         verify(
           () => preCacheSingleAudio
-              .onCall('packages/pinball_audio/assets/sfx/dino.mp3'),
-        ).called(1);
-        verify(
-          () => preCacheSingleAudio
               .onCall('packages/pinball_audio/assets/sfx/android.mp3'),
         ).called(1);
         verify(
@@ -437,48 +433,6 @@ void main() {
             volume: any(named: 'volume'),
           ),
         ).called(1);
-      });
-    });
-
-    group('dino', () {
-      test('plays the correct file', () async {
-        await Future.wait(
-          audioPlayer.load().map((loadableBuilder) => loadableBuilder()),
-        );
-        audioPlayer.play(PinballAudio.dino);
-
-        verify(
-          () => playSingleAudio.onCall(
-            'packages/pinball_audio/${Assets.sfx.dino}',
-            volume: any(named: 'volume'),
-          ),
-        ).called(1);
-      });
-
-      test('only plays the sound again after 6 seconds', () async {
-        final clock = _MockClock();
-        await withClock(clock, () async {
-          when(clock.now).thenReturn(DateTime(2022));
-          await Future.wait(
-            audioPlayer.load().map((loadableBuilder) => loadableBuilder()),
-          );
-          audioPlayer
-            ..play(PinballAudio.dino)
-            ..play(PinballAudio.dino);
-
-          verify(
-            () => playSingleAudio
-                .onCall('packages/pinball_audio/${Assets.sfx.dino}'),
-          ).called(1);
-
-          when(clock.now).thenReturn(DateTime(2022, 1, 1, 1, 6));
-          audioPlayer.play(PinballAudio.dino);
-
-          verify(
-            () => playSingleAudio
-                .onCall('packages/pinball_audio/${Assets.sfx.dino}'),
-          ).called(1);
-        });
       });
     });
 

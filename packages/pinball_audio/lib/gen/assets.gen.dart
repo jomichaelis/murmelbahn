@@ -19,7 +19,6 @@ class $AssetsSfxGen {
   String get bumperB => 'assets/sfx/bumper_b.mp3';
   String get cowMoo => 'assets/sfx/cow_moo.mp3';
   String get dash => 'assets/sfx/dash.mp3';
-  String get dino => 'assets/sfx/dino.mp3';
   String get flipper => 'assets/sfx/flipper.mp3';
   String get gameOverVoiceOver => 'assets/sfx/game_over_voice_over.mp3';
   String get google => 'assets/sfx/google.mp3';
