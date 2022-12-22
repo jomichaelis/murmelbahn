@@ -61,10 +61,10 @@ flutter:
     - assets/images/jurte_area/bumper/main/
     - assets/images/flipper/
     - assets/images/launch_ramp/
-    - assets/images/dash/
-    - assets/images/dash/bumper/a/
-    - assets/images/dash/bumper/b/
-    - assets/images/dash/bumper/main/
+    - assets/images/murmeltier/
+    - assets/images/murmeltier/kothe/a/
+    - assets/images/murmeltier/kothe/b/
+    - assets/images/murmeltier/kothe/main/
     - assets/images/android/spaceship/
     - assets/images/android/rail/
     - assets/images/android/ramp/

@@ -49,6 +49,7 @@ dependencies:
   geometry:
     path: packages/geometry
   intl: ^0.17.0
+  intro_slider: ^4.2.0
   authentication_repository:
     path: packages/authentication_repository
   leaderboard_repository:
@@ -67,6 +68,7 @@ dependencies:
     path: packages/platform_helper
   share_repository:
     path: packages/share_repository
+  shared_preferences: ^2.0.15
   url_launcher: ^6.1.7
 
 dev_dependencies:
@@ -94,6 +96,7 @@ flutter:
     - assets/images/components/
     - assets/images/bonus_animation/
     - assets/images/score/
+    - assets/launcher_icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

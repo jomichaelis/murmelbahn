@@ -58,7 +58,7 @@ class GameBlocStatusListener extends Component
         .onReset();
     gameRef
         .descendants()
-        .whereType<FlameBlocProvider<DashBumpersCubit, DashBumpersState>>()
+        .whereType<FlameBlocProvider<MurmeltierKothenCubit, MurmeltierKothenState>>()
         .single
         .bloc
         .onReset();

@@ -35,7 +35,7 @@ class InspiScorch extends Component {
             )..initialPosition = Vector2(-3.3, -52.55),
             InspiAnimatronic(
               children: [
-                AnimatronicLoopingBehavior(animationCoolDown: 8),
+                AnimatronicLoopingBehavior(animationCoolDown: 4),
               ],
             )..position = Vector2(-14, -58.2),
             InspiFire(

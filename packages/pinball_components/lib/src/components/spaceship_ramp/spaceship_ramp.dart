@@ -77,8 +77,8 @@ class _SpaceshipRampBackground extends BodyComponent
   List<FixtureDef> _createFixtureDefs() {
     final outerLeftCurveShape = BezierCurveShape(
       controlPoints: [
-        Vector2(-30.75, -37.3),
-        Vector2(-32.5, -71.25),
+        Vector2(-30.45, -37.3),
+        Vector2(-33.5, -71.25),
         Vector2(-14.2, -71.25),
       ],
     );
@@ -117,7 +117,7 @@ class _SpaceshipRampBackgroundRailingSpriteComponent extends SpriteComponent
   _SpaceshipRampBackgroundRailingSpriteComponent()
       : super(
           anchor: Anchor.center,
-          position: Vector2(-11.7, -54.3),
+          position: Vector2(-11.6, -54.7),
         ) {
     zIndex = ZIndexes.spaceshipRampBackgroundRailing;
   }
@@ -131,7 +131,7 @@ class _SpaceshipRampBackgroundRailingSpriteComponent extends SpriteComponent
       ),
     );
     this.sprite = sprite;
-    size = sprite.originalSize / 10;
+    size = sprite.originalSize / 10.1;
   }
 }
 
@@ -261,8 +261,8 @@ class SpaceshipRampBoardOpening extends BodyComponent
   List<FixtureDef> _createFixtureDefs() {
     final topEdge = EdgeShape()
       ..set(
-        Vector2(-3.4, -1.2),
-        Vector2(3.4, -1.6),
+        Vector2(-3.9, -1.2),
+        Vector2(3.6, -1.6),
       );
     final bottomEdge = EdgeShape()
       ..set(
@@ -273,7 +273,7 @@ class SpaceshipRampBoardOpening extends BodyComponent
       controlPoints: [
         topEdge.vertex1,
         Vector2(0, 2.3),
-        Vector2(7.5, 2.3),
+        Vector2(4.5, 3.3),
         topEdge.vertex2,
       ],
     );
@@ -309,6 +309,7 @@ class SpaceshipRampBoardOpening extends BodyComponent
         isSensor: true,
         userData: 'middle',
       ),
+      /*
       FixtureDef(
         leftCurve,
         isSensor: true,
@@ -319,6 +320,7 @@ class SpaceshipRampBoardOpening extends BodyComponent
         isSensor: true,
         userData: outsideKey,
       ),
+      */
     ];
   }
 
@@ -363,15 +365,15 @@ class _SpaceshipRampForegroundRailing extends BodyComponent
   List<FixtureDef> _createFixtureDefs() {
     final innerLeftCurveShape = BezierCurveShape(
       controlPoints: [
-        Vector2(-24.5, -38),
-        Vector2(-26.3, -64),
-        Vector2(-13.8, -64.5),
+        Vector2(-24.3, -38),
+        Vector2(-27.1, -65),
+        Vector2(-13.8, -66.1),
       ],
     );
     final innerRightCurveShape = BezierCurveShape(
       controlPoints: [
         innerLeftCurveShape.vertices.last,
-        Vector2(-2.5, -66.2),
+        Vector2(-1.5, -64.2),
         Vector2(0, -44.5),
       ],
     );
@@ -403,7 +405,7 @@ class _SpaceshipRampForegroundRailingSpriteComponent extends SpriteComponent
   _SpaceshipRampForegroundRailingSpriteComponent()
       : super(
           anchor: Anchor.center,
-          position: Vector2(-12.3, -51.5),
+          position: Vector2(-12.1, -52.2),
         );
 
   @override
@@ -415,7 +417,7 @@ class _SpaceshipRampForegroundRailingSpriteComponent extends SpriteComponent
       ),
     );
     this.sprite = sprite;
-    size = sprite.originalSize / 10;
+    size = sprite.originalSize / 10.1;
   }
 }
 

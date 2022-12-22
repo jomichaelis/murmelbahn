@@ -165,6 +165,6 @@ class _InspiBumperSpriteGroupComponent
       ),
     };
     this.sprites = sprites;
-    size = sprites[current]!.originalSize / 7.5;
+    size = sprites[current]!.originalSize / 9;
   }
 }

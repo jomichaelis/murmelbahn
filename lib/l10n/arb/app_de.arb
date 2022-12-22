@@ -64,9 +64,13 @@
   "@group": {
     "description": "Label text displayed above player's group"
   },
-  "name": "Spieler",
+  "name": "Dein Name",
   "@name": {
     "description": "Label text displayed above player's initials"
+  },
+  "optional": "optional",
+  "@optional": {
+    "description": "Label text displayed above player's name to hint the name is optional"
   },
   "score": "Punkte",
   "@score": {

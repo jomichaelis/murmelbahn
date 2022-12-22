@@ -20,7 +20,7 @@ class $AssetsImagesGen {
       const AssetGenImage('assets/images/board_background.png');
 
   $AssetsImagesBoundaryGen get boundary => const $AssetsImagesBoundaryGen();
-  $AssetsImagesDashGen get dash => const $AssetsImagesDashGen();
+  $AssetsImagesMurmeltierGen get murmeltier => const $AssetsImagesMurmeltierGen();
   $AssetsImagesJurteAreaGen get jurteArea => const $AssetsImagesJurteAreaGen();
 
   $AssetsImagesDisplayArrowsGen get displayArrows =>
@@ -116,14 +116,14 @@ class $AssetsImagesBoundaryGen {
       const AssetGenImage('assets/images/boundary/outer_bottom.png');
 }
 
-class $AssetsImagesDashGen {
-  const $AssetsImagesDashGen();
+class $AssetsImagesMurmeltierGen {
+  const $AssetsImagesMurmeltierGen();
 
-  /// File path: assets/images/dash/animatronic.png
+  /// File path: assets/images/murmeltier/animatronic.png
   AssetGenImage get animatronic =>
-      const AssetGenImage('assets/images/dash/animatronic.png');
+      const AssetGenImage('assets/images/murmeltier/animatronic.png');
 
-  $AssetsImagesDashBumperGen get bumper => const $AssetsImagesDashBumperGen();
+  $AssetsImagesMurmeltierKotheGen get kothe => const $AssetsImagesMurmeltierKotheGen();
 }
 
 class $AssetsImagesJurteAreaGen {
@@ -423,13 +423,13 @@ class $AssetsImagesBackboxButtonGen {
       const AssetGenImage('assets/images/backbox/button/twitter.png');
 }
 
-class $AssetsImagesDashBumperGen {
-  const $AssetsImagesDashBumperGen();
+class $AssetsImagesMurmeltierKotheGen {
+  const $AssetsImagesMurmeltierKotheGen();
 
-  $AssetsImagesDashBumperAGen get a => const $AssetsImagesDashBumperAGen();
-  $AssetsImagesDashBumperBGen get b => const $AssetsImagesDashBumperBGen();
-  $AssetsImagesDashBumperMainGen get main =>
-      const $AssetsImagesDashBumperMainGen();
+  $AssetsImagesMurmeltierKotheAGen get a => const $AssetsImagesMurmeltierKotheAGen();
+  $AssetsImagesMurmeltierKotheBGen get b => const $AssetsImagesMurmeltierKotheBGen();
+  $AssetsImagesMurmeltierKotheMainGen get main =>
+      const $AssetsImagesMurmeltierKotheMainGen();
 }
 
 class $AssetsImagesGoogleRolloverLeftGen {
@@ -700,40 +700,40 @@ class $AssetsImagesAndroidRampArrowGen {
       const AssetGenImage('assets/images/android/ramp/arrow/inactive.png');
 }
 
-class $AssetsImagesDashBumperAGen {
-  const $AssetsImagesDashBumperAGen();
+class $AssetsImagesMurmeltierKotheAGen {
+  const $AssetsImagesMurmeltierKotheAGen();
 
-  /// File path: assets/images/dash/bumper/a/active.png
+  /// File path: assets/images/murmeltier/kothe/a/active.png
   AssetGenImage get active =>
-      const AssetGenImage('assets/images/dash/bumper/a/active.png');
+      const AssetGenImage('assets/images/murmeltier/kothe/a/active.png');
 
-  /// File path: assets/images/dash/bumper/a/inactive.png
+  /// File path: assets/images/murmeltier/kothe/a/inactive.png
   AssetGenImage get inactive =>
-      const AssetGenImage('assets/images/dash/bumper/a/inactive.png');
+      const AssetGenImage('assets/images/murmeltier/kothe/a/inactive.png');
 }
 
-class $AssetsImagesDashBumperBGen {
-  const $AssetsImagesDashBumperBGen();
+class $AssetsImagesMurmeltierKotheBGen {
+  const $AssetsImagesMurmeltierKotheBGen();
 
-  /// File path: assets/images/dash/bumper/b/active.png
+  /// File path: assets/images/murmeltier/kothe/b/active.png
   AssetGenImage get active =>
-      const AssetGenImage('assets/images/dash/bumper/b/active.png');
+      const AssetGenImage('assets/images/murmeltier/kothe/b/active.png');
 
-  /// File path: assets/images/dash/bumper/b/inactive.png
+  /// File path: assets/images/murmeltier/kothe/b/inactive.png
   AssetGenImage get inactive =>
-      const AssetGenImage('assets/images/dash/bumper/b/inactive.png');
+      const AssetGenImage('assets/images/murmeltier/kothe/b/inactive.png');
 }
 
-class $AssetsImagesDashBumperMainGen {
-  const $AssetsImagesDashBumperMainGen();
+class $AssetsImagesMurmeltierKotheMainGen {
+  const $AssetsImagesMurmeltierKotheMainGen();
 
-  /// File path: assets/images/dash/bumper/main/active.png
+  /// File path: assets/images/murmeltier/kothe/main/active.png
   AssetGenImage get active =>
-      const AssetGenImage('assets/images/dash/bumper/main/active.png');
+      const AssetGenImage('assets/images/murmeltier/kothe/main/active.png');
 
-  /// File path: assets/images/dash/bumper/main/inactive.png
+  /// File path: assets/images/murmeltier/kothe/main/inactive.png
   AssetGenImage get inactive =>
-      const AssetGenImage('assets/images/dash/bumper/main/inactive.png');
+      const AssetGenImage('assets/images/murmeltier/kothe/main/inactive.png');
 }
 
 class $AssetsImagesInspiBumperAGen {

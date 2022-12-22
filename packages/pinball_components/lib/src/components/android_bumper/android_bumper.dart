@@ -48,7 +48,7 @@ class AndroidBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   AndroidBumper.a({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 4.32,
+          majorRadius: 4.12,
           minorRadius: 2.47,
           rotation: 1.49,
           litAssetPath: Assets.images.android.bumper.a.lit.keyName,
@@ -65,12 +65,12 @@ class AndroidBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   AndroidBumper.b({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 3.89,
-          minorRadius: 2.39,
+          majorRadius: 3.59,
+          minorRadius: 2.29,
           rotation: 1.65,
           litAssetPath: Assets.images.android.bumper.b.lit.keyName,
           dimmedAssetPath: Assets.images.android.bumper.b.dimmed.keyName,
-          spritePosition: Vector2(0.1, -0.8),
+          spritePosition: Vector2(0, -0.8),
           bloc: AndroidBumperCubit(),
           children: [
             ...?children,
@@ -82,8 +82,8 @@ class AndroidBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   AndroidBumper.cow({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 3.75,
-          minorRadius: 2.68,
+          majorRadius: 3.45,
+          minorRadius: 2.28,
           rotation: 1.49,
           litAssetPath: Assets.images.android.bumper.cow.lit.keyName,
           dimmedAssetPath: Assets.images.android.bumper.cow.dimmed.keyName,
@@ -166,6 +166,6 @@ class _AndroidBumperSpriteGroupComponent
           Sprite(gameRef.images.fromCache(_dimmedAssetPath)),
     };
     this.sprites = sprites;
-    size = sprites[current]!.originalSize / 8.5;
+    size = sprites[current]!.originalSize / 9;
   }
 }

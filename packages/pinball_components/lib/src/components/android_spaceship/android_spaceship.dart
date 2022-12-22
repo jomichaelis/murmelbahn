@@ -57,7 +57,7 @@ class _SpaceshipSaucer extends BodyComponent with InitialPosition, Layered {
 class _SpaceshipSaucerShape extends ChainShape {
   _SpaceshipSaucerShape() {
     const minorRadius = 9.75;
-    const majorRadius = 11.9;
+    const majorRadius = 12.3;
 
     createChain(
       [

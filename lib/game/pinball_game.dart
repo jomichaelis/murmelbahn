@@ -64,7 +64,6 @@ class PinballGame extends PinballForge2DGame
   List<LeaderboardEntryData>? _entries;
 
   Future<void> preFetchLeaderboard() async {
-    print("LOADIN");
     try {
       _entries = await leaderboardRepository.fetchTop10Leaderboard();
     } catch (error) {
@@ -126,7 +125,7 @@ class PinballGame extends PinballForge2DGame
                       ),
                       AndroidAcres(),
                       JurteArea(),
-                      FlutterForest(),
+                      MurmeltierCamp(),
                       InspiScorch(),
                       Drain(),
                       BottomGroup(),

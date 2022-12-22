@@ -57,6 +57,16 @@ class BonusAnimation extends StatefulWidget {
           key: key,
         );
 
+  /// [Widget] that displays the jurte singerunde animation.
+  BonusAnimation.jurteSingerunde({
+    Key? key,
+    VoidCallback? onCompleted,
+  }) : this._(
+    Assets.images.bonusAnimation.googleWord.keyName,
+    onCompleted: onCompleted,
+    key: key,
+  );
+
   final String _imagePath;
 
   final VoidCallback? _onCompleted;

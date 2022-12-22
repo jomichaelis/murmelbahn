@@ -7,9 +7,9 @@ import 'package:pinball_flame/pinball_flame.dart';
 export 'cubit/signpost_cubit.dart';
 
 /// {@template signpost}
-/// A sign, found in the Flutter Forest.
+/// A sign, found in the Murmeltier Camp.
 ///
-/// Lights up a new sign whenever all three [DashBumper]s are hit.
+/// Lights up a new sign whenever all three [MurmeltierKothe]n are hit.
 /// {@endtemplate}
 class Signpost extends BodyComponent with InitialPosition {
   /// {@macro signpost}
@@ -28,11 +28,11 @@ class Signpost extends BodyComponent with InitialPosition {
   Future<void> onLoad() async {
     await super.onLoad();
     await add(
-      FlameBlocListener<DashBumpersCubit, DashBumpersState>(
+      FlameBlocListener<MurmeltierKothenCubit, MurmeltierKothenState>(
         listenWhen: (_, state) => state.isFullyActivated,
         onNewState: (_) {
           readBloc<SignpostCubit, SignpostState>().onProgressed();
-          readBloc<DashBumpersCubit, DashBumpersState>().onReset();
+          readBloc<MurmeltierKothenCubit, MurmeltierKothenState>().onReset();
         },
       ),
     );

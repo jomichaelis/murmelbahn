@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flame/components.dart';
+import 'package:flame/events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
@@ -17,7 +18,7 @@ final _bodyTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 3,
     color: PinballColors.white,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
   ),
 );
 
@@ -25,7 +26,7 @@ final _subtitleTextPaint = TextPaint(
   style: const TextStyle(
     fontSize: 1.8,
     color: PinballColors.white,
-    fontFamily: PinballFonts.pixeloidSans,
+    fontFamily: PinballFonts.chunkfiveEx,
   ),
 );
 
@@ -104,7 +105,7 @@ class _ScoreLabelTextComponent extends TextComponent {
   _ScoreLabelTextComponent()
       : super(
           anchor: Anchor.centerLeft,
-          position: Vector2(-16.9, -24),
+          position: Vector2(-20.9, -24),
           textRenderer: _bodyTextPaint.copyWith(
             (style) => style.copyWith(
               color: PinballColors.red,
@@ -124,7 +125,7 @@ class _ScoreTextComponent extends TextComponent {
       : super(
           text: score,
           anchor: Anchor.centerLeft,
-          position: Vector2(-16.9, -20),
+          position: Vector2(-20.9, -20),
           textRenderer: _bodyTextPaint,
         );
 }
@@ -133,7 +134,7 @@ class _NameLabelTextComponent extends TextComponent {
   _NameLabelTextComponent()
       : super(
           anchor: Anchor.center,
-          position: Vector2(10.8, -24),
+          position: Vector2(14.8, -24),
           textRenderer: _bodyTextPaint.copyWith(
             (style) => style.copyWith(
               color: PinballColors.red,

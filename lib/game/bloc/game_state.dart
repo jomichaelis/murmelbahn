@@ -13,6 +13,9 @@ enum GameBonus {
 
   /// Bonus achieved when a ball enters the android spaceship.
   androidSpaceship,
+
+  /// Bonus achieved when a ball enters the jurte
+  jurteSingerunde,
 }
 
 enum GameStatus {

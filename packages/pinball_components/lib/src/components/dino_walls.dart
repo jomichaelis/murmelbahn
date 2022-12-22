@@ -31,7 +31,7 @@ class _DinoTopWall extends BodyComponent with InitialPosition, ZIndex {
             _DinoTopWallSpriteComponent(),
             _DinoTopWallTunnelSpriteComponent(),
           ],
-          renderBody: true,
+          renderBody: false,
         );
 
   List<FixtureDef> _createFixtureDefs() {

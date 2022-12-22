@@ -6,28 +6,28 @@ import 'package:flame_forge2d/flame_forge2d.dart';
 import 'package:flutter/material.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_components/src/components/bumping_behavior.dart';
-import 'package:pinball_components/src/components/dash_bumper/behaviors/behaviors.dart';
+import 'package:pinball_components/src/components/murmeltier_kothe/behaviors/behaviors.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 
-export 'cubit/dash_bumpers_cubit.dart';
+export 'cubit/murmeltier_kothen_cubit.dart';
 
-enum DashBumperSpriteState {
+enum MurmeltierKotheSpriteState {
   active,
   inactive,
 }
 
-enum DashBumperId {
+enum MurmeltierKotheId {
   main,
   a,
   b,
 }
 
-/// {@template dash_bumper}
-/// Bumper for the flutter forest.
+/// {@template murmeltier_kothe}
+/// Bumper Kothe for the Murmeltier Camp.
 /// {@endtemplate}
-class DashBumper extends BodyComponent with InitialPosition {
+class MurmeltierKothe extends BodyComponent with InitialPosition {
   /// {@macro dash_bumper}
-  DashBumper._({
+  MurmeltierKothe._({
     required this.id,
     required double majorRadius,
     required double minorRadius,
@@ -42,30 +42,30 @@ class DashBumper extends BodyComponent with InitialPosition {
         super(
           renderBody: false,
           children: [
-            DashBumperSpriteGroupComponent(
+            MurmeltierKotheSpriteGroupComponent(
               id: id,
               activeAssetPath: activeAssetPath,
               inactiveAssetPath: inactiveAssetPath,
               position: spritePosition,
             ),
-            DashBumperBallContactBehavior(),
+            MurmeltierKotheBallContactBehavior(),
             ...?children,
           ],
         );
 
-  /// {@macro dash_bumper}
+  /// {@macro murmeltier_kothe}
   ///
-  /// [DashBumper.main], usually positioned with a [DashAnimatronic] on top of
+  /// [MurmeltierKothe.main], usually positioned with a [MurmeltierAnimatronic] on top of
   /// it.
-  DashBumper.main({
+  MurmeltierKothe.main({
     Iterable<Component>? children,
   }) : this._(
-          id: DashBumperId.main,
-          majorRadius: 5.8,
-          minorRadius: 3.58,
+          id: MurmeltierKotheId.main,
+          majorRadius: 4.9,
+          minorRadius: 3.18,
           rotation: 1.6,
-          activeAssetPath: Assets.images.dash.bumper.main.active.keyName,
-          inactiveAssetPath: Assets.images.dash.bumper.main.inactive.keyName,
+          activeAssetPath: Assets.images.murmeltier.kothe.main.active.keyName,
+          inactiveAssetPath: Assets.images.murmeltier.kothe.main.inactive.keyName,
           spritePosition: Vector2(0, -0.3),
           children: [
             ...?children,
@@ -73,40 +73,40 @@ class DashBumper extends BodyComponent with InitialPosition {
           ],
         );
 
-  /// {@macro dash_bumper}
+  /// {@macro murmeltier_kothe}
   ///
-  /// [DashBumper.a] is positioned at the right side of the [DashBumper.main] in
-  /// the flutter forest.
-  DashBumper.a({
+  /// [MurmeltierKothe.a] is positioned at the right side of the [MurmeltierKothe.main] in
+  /// the Murmeltier Camp.
+  MurmeltierKothe.a({
     Iterable<Component>? children,
   }) : this._(
-          id: DashBumperId.a,
-          majorRadius: 3.9,
-          minorRadius: 2.4,
+          id: MurmeltierKotheId.a,
+          majorRadius: 3.4,
+          minorRadius: 2.1,
           rotation: 1.44,
-          activeAssetPath: Assets.images.dash.bumper.a.active.keyName,
-          inactiveAssetPath: Assets.images.dash.bumper.a.inactive.keyName,
-          spritePosition: Vector2(0, -1.2),
+          activeAssetPath: Assets.images.murmeltier.kothe.a.active.keyName,
+          inactiveAssetPath: Assets.images.murmeltier.kothe.a.inactive.keyName,
+          spritePosition: Vector2(0, -1.1),
           children: [
             ...?children,
             BumpingBehavior(strength: 20),
           ],
         );
 
-  /// {@macro dash_bumper}
+  /// {@macro murmeltier_kothe}
   ///
-  /// [DashBumper.b] is positioned at the left side of the [DashBumper.main] in
-  /// the flutter forest.
-  DashBumper.b({
+  /// [MurmeltierKothe.b] is positioned at the left side of the [MurmeltierKothe.main] in
+  /// the murmeltier camp.
+  MurmeltierKothe.b({
     Iterable<Component>? children,
   }) : this._(
-          id: DashBumperId.b,
-          majorRadius: 3.9,
-          minorRadius: 2.4,
+          id: MurmeltierKotheId.b,
+          majorRadius: 3.5,
+          minorRadius: 2.1,
           rotation: 1.6,
-          activeAssetPath: Assets.images.dash.bumper.b.active.keyName,
-          inactiveAssetPath: Assets.images.dash.bumper.b.inactive.keyName,
-          spritePosition: Vector2(0.2, -1.2),
+          activeAssetPath: Assets.images.murmeltier.kothe.b.active.keyName,
+          inactiveAssetPath: Assets.images.murmeltier.kothe.b.inactive.keyName,
+          spritePosition: Vector2(0.1, -1.1),
           children: [
             ...?children,
             BumpingBehavior(strength: 20),
@@ -115,14 +115,14 @@ class DashBumper extends BodyComponent with InitialPosition {
 
   /// Creates a [DashBumper] without any children.
   ///
-  /// This can be used for testing [DashBumper]'s behaviors in isolation.
+  /// This can be used for testing [MurmeltierKothe]'s behaviors in isolation.
   @visibleForTesting
-  DashBumper.test({required this.id})
+  MurmeltierKothe.test({required this.id})
       : _majorRadius = 3,
         _minorRadius = 2.5,
         _rotation = 1.6;
 
-  final DashBumperId id;
+  final MurmeltierKotheId id;
   final double _majorRadius;
   final double _minorRadius;
   final double _rotation;
@@ -143,11 +143,11 @@ class DashBumper extends BodyComponent with InitialPosition {
 }
 
 @visibleForTesting
-class DashBumperSpriteGroupComponent
-    extends SpriteGroupComponent<DashBumperSpriteState>
-    with HasGameRef, FlameBlocListenable<DashBumpersCubit, DashBumpersState> {
-  DashBumperSpriteGroupComponent({
-    required DashBumperId id,
+class MurmeltierKotheSpriteGroupComponent
+    extends SpriteGroupComponent<MurmeltierKotheSpriteState>
+    with HasGameRef, FlameBlocListenable<MurmeltierKothenCubit, MurmeltierKothenState> {
+  MurmeltierKotheSpriteGroupComponent({
+    required MurmeltierKotheId id,
     required String activeAssetPath,
     required String inactiveAssetPath,
     required Vector2 position,
@@ -159,32 +159,32 @@ class DashBumperSpriteGroupComponent
           position: position,
         );
 
-  final DashBumperId _id;
+  final MurmeltierKotheId _id;
   final String _activeAssetPath;
   final String _inactiveAssetPath;
 
   @override
-  bool listenWhen(DashBumpersState previousState, DashBumpersState newState) {
-    return previousState.bumperSpriteStates[_id] !=
-        newState.bumperSpriteStates[_id];
+  bool listenWhen(MurmeltierKothenState previousState, MurmeltierKothenState newState) {
+    return previousState.kotheSpriteStates[_id] !=
+        newState.kotheSpriteStates[_id];
   }
 
   @override
-  void onNewState(DashBumpersState state) =>
-      current = state.bumperSpriteStates[_id];
+  void onNewState(MurmeltierKothenState state) =>
+      current = state.kotheSpriteStates[_id];
 
   @override
   Future<void> onLoad() async {
     await super.onLoad();
 
     final sprites = {
-      DashBumperSpriteState.active:
+      MurmeltierKotheSpriteState.active:
           Sprite(gameRef.images.fromCache(_activeAssetPath)),
-      DashBumperSpriteState.inactive:
+      MurmeltierKotheSpriteState.inactive:
           Sprite(gameRef.images.fromCache(_inactiveAssetPath)),
     };
     this.sprites = sprites;
-    current = DashBumperSpriteState.inactive;
-    size = sprites[current]!.originalSize / 9;
+    current = MurmeltierKotheSpriteState.inactive;
+    size = sprites[current]!.originalSize / 10;
   }
 }

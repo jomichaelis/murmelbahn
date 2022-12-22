@@ -13,6 +13,37 @@ import 'package:pinball_ui/pinball_ui.dart';
 import 'package:platform_helper/platform_helper.dart';
 import 'package:share_repository/share_repository.dart';
 
+import 'intro_screen.dart';
+
+class PinballGameRootPage extends StatefulWidget {
+  const PinballGameRootPage({
+    Key? key,
+    this.isDebugMode = kDebugMode,
+  }) : super(key: key);
+
+  final bool isDebugMode;
+
+  @override
+  State<PinballGameRootPage> createState() => _PinballGameRootPageState();
+}
+
+class _PinballGameRootPageState extends State<PinballGameRootPage> {
+
+  bool _isFirstVisit = false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return _isFirstVisit
+      ? IntroScreenDefault()
+      : PinballGamePage();
+  }
+}
+
 class PinballGamePage extends StatelessWidget {
   const PinballGamePage({
     Key? key,
@@ -29,13 +60,13 @@ class PinballGamePage extends StatelessWidget {
     final platformHelper = context.read<PlatformHelper>();
     final gameBloc = context.read<GameBloc>();
     final game = PinballGame(
-            audioPlayer: audioPlayer,
-            leaderboardRepository: leaderboardRepository,
-            shareRepository: shareRepository,
-            l10n: context.l10n,
-            platformHelper: platformHelper,
-            gameBloc: gameBloc,
-          );
+      audioPlayer: audioPlayer,
+      leaderboardRepository: leaderboardRepository,
+      shareRepository: shareRepository,
+      l10n: context.l10n,
+      platformHelper: platformHelper,
+      gameBloc: gameBloc,
+    );
 
     return Scaffold(
       backgroundColor: PinballColors.black,
@@ -111,7 +142,7 @@ class PinballGameLoadedView extends StatelessWidget {
             ),
           ),
           const _PositionedGameHud(),
-          const _PositionedInfoIcon(),
+          const _PositionedInfoIcon(), // TODO
         ],
       ),
     );

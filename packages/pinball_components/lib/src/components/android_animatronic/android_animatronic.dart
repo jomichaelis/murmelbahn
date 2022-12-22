@@ -36,8 +36,8 @@ class AndroidAnimatronic extends BodyComponent
     final shape = EllipseShape(
       center: Vector2.zero(),
       majorRadius: 3.1,
-      minorRadius: 2,
-    )..rotate(1.4);
+      minorRadius: 2.15,
+    )..rotate(1.6);
     final bodyDef = BodyDef(position: initialPosition);
 
     return world.createBody(bodyDef)..createFixtureFromShape(shape);
@@ -49,7 +49,7 @@ class _AndroidAnimatronicSpriteAnimationComponent
   _AndroidAnimatronicSpriteAnimationComponent()
       : super(
           anchor: Anchor.center,
-          position: Vector2(-0.24, -2.6),
+          position: Vector2(-0.14, -3.1),
         );
 
   @override
@@ -60,18 +60,18 @@ class _AndroidAnimatronicSpriteAnimationComponent
       Assets.images.android.spaceship.animatronic.keyName,
     );
 
-    const amountPerRow = 18;
-    const amountPerColumn = 4;
+    const amountPerRow = 11;
+    const amountPerColumn = 7;
     final textureSize = Vector2(
       spriteSheet.width / amountPerRow,
       spriteSheet.height / amountPerColumn,
     );
-    size = textureSize / 10;
+    size = textureSize / 13;
 
     animation = SpriteAnimation.fromFrameData(
       spriteSheet,
       SpriteAnimationData.sequenced(
-        amount: amountPerRow * amountPerColumn,
+        amount: 72,
         amountPerRow: amountPerRow,
         stepTime: 1 / 24,
         textureSize: textureSize,

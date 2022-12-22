@@ -1,12 +1,12 @@
 import 'package:flame/components.dart';
 import 'package:pinball_components/pinball_components.dart';
 
-/// {@template dash_animatronic}
-/// Animated Dash that sits on top of the [DashBumper.main].
+/// {@template murmeltier_animatronic}
+/// Animated Dash that sits on top of the [MurmeltierKothe.main].
 /// {@endtemplate}
-class DashAnimatronic extends SpriteAnimationComponent with HasGameRef {
-  /// {@macro dash_animatronic}
-  DashAnimatronic({Iterable<Component>? children})
+class MurmeltierAnimatronic extends SpriteAnimationComponent with HasGameRef {
+  /// {@macro murmeltier_animatronic}
+  MurmeltierAnimatronic({Iterable<Component>? children})
       : super(
           anchor: Anchor.center,
           playing: false,
@@ -18,7 +18,7 @@ class DashAnimatronic extends SpriteAnimationComponent with HasGameRef {
     await super.onLoad();
 
     final spriteSheet = gameRef.images.fromCache(
-      Assets.images.dash.animatronic.keyName,
+      Assets.images.murmeltier.animatronic.keyName,
     );
 
     const amountPerRow = 13;

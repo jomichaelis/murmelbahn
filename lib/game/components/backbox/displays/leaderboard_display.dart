@@ -28,19 +28,6 @@ double _calcY(int i) => (i * 3.2) + 3.2;
 
 const _columns = [-27.0, -18.0, 0.0, 20.0];
 
-String _rank(int number) {
-  switch (number) {
-    case 1:
-      return '${number}st';
-    case 2:
-      return '${number}nd';
-    case 3:
-      return '${number}rd';
-    default:
-      return '${number}th';
-  }
-}
-
 /// {@template leaderboard_display}
 /// Component that builds the leaderboard list of the Backbox.
 /// {@endtemplate}
@@ -105,7 +92,7 @@ class LeaderboardDisplay extends PositionComponent with HasGameRef {
         position: Vector2(0, 4),
         children: [
           _MovePageArrow(
-            position: Vector2(-31, 9),
+            position: Vector2(31, 9),
             onTap: () {
               _changePage(_entries.sublist(5), 5);
             },
@@ -172,7 +159,7 @@ class _RankingPage extends PositionComponent with HasGameRef {
         PositionComponent(
           children: [
             TextComponent(
-              text: _rank(i + 1 + offset),
+              text: '${i + 1 + offset}.',
               textRenderer: _bodyTextPaint,
               position: Vector2(_columns[0], _calcY(i)),
               anchor: Anchor.center,

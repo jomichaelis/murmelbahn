@@ -5,12 +5,12 @@ import 'package:murmelbahn/game/game.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 
-/// Bonus obtained at the [FlutterForest].
+/// Bonus obtained at the [MurmeltierCamp].
 ///
 /// When all [DashBumper]s are hit at least once three times, the [Signpost]
 /// progresses. When the [Signpost] fully progresses, the [GameBonus.dashNest]
 /// is awarded, and the [DashBumper.main] releases a new [Ball].
-class FlutterForestBonusBehavior extends Component {
+class MurmeltierCampBonusBehavior extends Component {
   @override
   Future<void> onLoad() async {
     await super.onLoad();
@@ -21,7 +21,7 @@ class FlutterForestBonusBehavior extends Component {
           readBloc<GameBloc, GameState>()
               .add(const BonusActivated(GameBonus.dashNest));
           readBloc<SignpostCubit, SignpostState>().onProgressed();
-          readBloc<DashBumpersCubit, DashBumpersState>().onReset();
+          readBloc<MurmeltierKothenCubit, MurmeltierKothenState>().onReset();
           add(BonusBallSpawningBehavior());
         },
       ),

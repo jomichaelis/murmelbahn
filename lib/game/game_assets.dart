@@ -37,17 +37,17 @@ extension PinballGameAssetsX on PinballGame {
       () => images.load(components.Assets.images.jurteArea.topWallTunnel.keyName),
       () => images.load(components.Assets.images.jurteArea.bumper.main.lit.keyName),
       () => images.load(components.Assets.images.jurteArea.bumper.main.dimmed.keyName),
-      () => images.load(components.Assets.images.dash.animatronic.keyName),
-      () => images.load(components.Assets.images.dash.bumper.a.active.keyName),
+      () => images.load(components.Assets.images.murmeltier.animatronic.keyName),
+      () => images.load(components.Assets.images.murmeltier.kothe.a.active.keyName),
       () =>
-          images.load(components.Assets.images.dash.bumper.a.inactive.keyName),
-      () => images.load(components.Assets.images.dash.bumper.b.active.keyName),
+          images.load(components.Assets.images.murmeltier.kothe.a.inactive.keyName),
+      () => images.load(components.Assets.images.murmeltier.kothe.b.active.keyName),
       () =>
-          images.load(components.Assets.images.dash.bumper.b.inactive.keyName),
+          images.load(components.Assets.images.murmeltier.kothe.b.inactive.keyName),
       () =>
-          images.load(components.Assets.images.dash.bumper.main.active.keyName),
+          images.load(components.Assets.images.murmeltier.kothe.main.active.keyName),
       () => images
-          .load(components.Assets.images.dash.bumper.main.inactive.keyName),
+          .load(components.Assets.images.murmeltier.kothe.main.inactive.keyName),
       () => images.load(components.Assets.images.plunger.plunger.keyName),
       () => images.load(components.Assets.images.plunger.rocket.keyName),
       () => images.load(components.Assets.images.boundary.bottom.keyName),

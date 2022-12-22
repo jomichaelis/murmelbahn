@@ -4,17 +4,17 @@ import 'package:flame/components.dart';
 import 'package:flame_bloc/flame_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:murmelbahn/game/behaviors/behaviors.dart';
-import 'package:murmelbahn/game/components/flutter_forest/behaviors/behaviors.dart';
+import 'package:murmelbahn/game/components/murmeltier_camp/behaviors/behaviors.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 
-/// {@template flutter_forest}
+/// {@template murmeltier_camp}
 /// Area positioned at the top right of the board where the [Ball] can bounce
-/// off [DashBumper]s.
+/// off [MurmeltierKothe]s.
 /// {@endtemplate}
-class FlutterForest extends Component with ZIndex {
-  /// {@macro flutter_forest}
-  FlutterForest()
+class MurmeltierCamp extends Component with ZIndex {
+  /// {@macro murmeltier_camp}
+  MurmeltierCamp()
       : super(
           children: [
             FlameMultiBlocProvider(
@@ -22,8 +22,8 @@ class FlutterForest extends Component with ZIndex {
                 FlameBlocProvider<SignpostCubit, SignpostState>(
                   create: SignpostCubit.new,
                 ),
-                FlameBlocProvider<DashBumpersCubit, DashBumpersState>(
-                  create: DashBumpersCubit.new,
+                FlameBlocProvider<MurmeltierKothenCubit, MurmeltierKothenState>(
+                  create: MurmeltierKothenCubit.new,
                 ),
               ],
               children: [
@@ -33,30 +33,30 @@ class FlutterForest extends Component with ZIndex {
                     BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(7.95, -58.35),
-                DashBumper.main(
+                MurmeltierKothe.main(
                   children: [
                     ScoringContactBehavior(points: Points.twoHundredThousand),
                     BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(18.55, -59.35),
-                DashBumper.a(
+                MurmeltierKothe.a(
                   children: [
                     ScoringContactBehavior(points: Points.twentyThousand),
                     BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(8.95, -51.95),
-                DashBumper.b(
+                MurmeltierKothe.b(
                   children: [
                     ScoringContactBehavior(points: Points.twentyThousand),
                     BumperNoiseBehavior(),
                   ],
-                )..initialPosition = Vector2(21.8, -46.75),
-                DashAnimatronic(
+                )..initialPosition = Vector2(20.8, -46.75),
+                MurmeltierAnimatronic(
                   children: [
-                    AnimatronicLoopingBehavior(animationCoolDown: 11),
+                    AnimatronicLoopingBehavior(animationCoolDown: 7),
                   ],
                 )..position = Vector2(18.6, -65),
-                FlutterForestBonusBehavior(),
+                MurmeltierCampBonusBehavior(),
               ],
             ),
           ],
@@ -64,9 +64,9 @@ class FlutterForest extends Component with ZIndex {
     zIndex = ZIndexes.flutterForest;
   }
 
-  /// Creates a [FlutterForest] without any children.
+  /// Creates a [MurmeltierCamp] without any children.
   ///
-  /// This can be used for testing [FlutterForest]'s behaviors in isolation.
+  /// This can be used for testing [MurmeltierCamp]'s behaviors in isolation.
   @visibleForTesting
-  FlutterForest.test();
+  MurmeltierCamp.test();
 }

@@ -126,6 +126,8 @@ class _AnimationView extends StatelessWidget {
         return BonusAnimation.inspiFire(onCompleted: onComplete);
       case GameBonus.googleWord:
         return BonusAnimation.googleWord(onCompleted: onComplete);
+      case GameBonus.jurteSingerunde:
+        return BonusAnimation.jurteSingerunde(onCompleted: onComplete);
       case GameBonus.androidSpaceship:
         return BonusAnimation.androidSpaceship(onCompleted: onComplete);
     }
