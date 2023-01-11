@@ -13,37 +13,6 @@ import 'package:pinball_ui/pinball_ui.dart';
 import 'package:platform_helper/platform_helper.dart';
 import 'package:share_repository/share_repository.dart';
 
-import 'intro_screen.dart';
-
-class PinballGameRootPage extends StatefulWidget {
-  const PinballGameRootPage({
-    Key? key,
-    this.isDebugMode = kDebugMode,
-  }) : super(key: key);
-
-  final bool isDebugMode;
-
-  @override
-  State<PinballGameRootPage> createState() => _PinballGameRootPageState();
-}
-
-class _PinballGameRootPageState extends State<PinballGameRootPage> {
-
-  bool _isFirstVisit = false;
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return _isFirstVisit
-      ? IntroScreenDefault()
-      : PinballGamePage();
-  }
-}
-
 class PinballGamePage extends StatelessWidget {
   const PinballGamePage({
     Key? key,
@@ -70,6 +39,7 @@ class PinballGamePage extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: PinballColors.black,
+      extendBodyBehindAppBar: false,
       body: BlocProvider(
         create: (_) => AssetsManagerCubit(game, audioPlayer)..load(),
         child: PinballGameView(game),
@@ -164,8 +134,15 @@ class _PositionedGameHud extends StatelessWidget {
     final gameWidgetWidth = MediaQuery.of(context).size.height * 9 / 16;
     final screenWidth = MediaQuery.of(context).size.width;
     final leftMargin = (screenWidth / 2) - (gameWidgetWidth / 1.8);
+    final clampedMargin = leftMargin > 0 ? leftMargin : 0.0;
+    final top = 60.0;
+    /*
+    final gameWidgetWidth = MediaQuery.of(context).size.height * 9 / 16;
+    final screenWidth = MediaQuery.of(context).size.width;
+    final leftMargin = (screenWidth / 2) - (gameWidgetWidth / 1.8);
     final clampedMargin = leftMargin > 0 ? leftMargin : 10.0;
     final top = 60.0;
+    */
 
     return Positioned(
       top: top,
