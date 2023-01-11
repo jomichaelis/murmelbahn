@@ -108,7 +108,7 @@ class _DinoTopWallSpriteComponent extends SpriteComponent
     with HasGameRef, ZIndex {
   _DinoTopWallSpriteComponent()
       : super(
-          position: Vector2(21.85, -41.07),
+          position: Vector2(21.55, -41.07),
         ) {
     zIndex = ZIndexes.jurteAreaTopWall;
   }
@@ -129,7 +129,7 @@ class _DinoTopWallSpriteComponent extends SpriteComponent
 class _DinoTopWallTunnelSpriteComponent extends SpriteComponent
     with HasGameRef, ZIndex {
   _DinoTopWallTunnelSpriteComponent()
-      : super(position: Vector2(22.41, -29.01)) {
+      : super(position: Vector2(22.01, -29.01)) {
     zIndex = ZIndexes.jurteAreaTopWallTunnel;
   }
 
