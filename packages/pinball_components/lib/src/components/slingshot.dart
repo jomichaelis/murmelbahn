@@ -19,7 +19,7 @@ class Slingshots extends Component with ZIndex {
             Slingshot(
               angle: -0.468,
               spritePath: Assets.images.slingshot.lower.keyName,
-            )..initialPosition = Vector2(24.6, 6.1),
+            )..initialPosition = Vector2(24.6, 7.1),
           ],
         ) {
     zIndex = ZIndexes.slingshots;
@@ -107,6 +107,6 @@ class _SlingshotSpriteComponent extends SpriteComponent with HasGameRef {
     await super.onLoad();
     final sprite = Sprite(gameRef.images.fromCache(_path));
     this.sprite = sprite;
-    size = sprite.originalSize / 10;
+    size = sprite.originalSize / 9;
   }
 }

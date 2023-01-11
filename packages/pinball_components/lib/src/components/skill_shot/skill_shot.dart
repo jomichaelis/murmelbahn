@@ -26,7 +26,6 @@ class SkillShot extends BodyComponent with pf.ZIndex {
           children: [
             SkillShotBallContactBehavior(),
             SkillShotBlinkingBehavior(),
-            _RolloverDecalSpriteComponent(),
             PinSpriteAnimationComponent(),
             _TextDecalSpriteGroupComponent(state: bloc.state.spriteState),
             ...?children,
@@ -62,28 +61,6 @@ class SkillShot extends BodyComponent with pf.ZIndex {
       );
     final fixtureDef = FixtureDef(shape, isSensor: true);
     return world.createBody(BodyDef())..createFixture(fixtureDef);
-  }
-}
-
-class _RolloverDecalSpriteComponent extends SpriteComponent with HasGameRef {
-  _RolloverDecalSpriteComponent()
-      : super(
-          anchor: Anchor.center,
-          position: Vector2(-31.9, 9.1),
-          angle: 0.11,
-        );
-
-  @override
-  Future<void> onLoad() async {
-    await super.onLoad();
-
-    final sprite = Sprite(
-      gameRef.images.fromCache(
-        Assets.images.skillShot.decal.keyName,
-      ),
-    );
-    this.sprite = sprite;
-    size = sprite.originalSize / 20;
   }
 }
 

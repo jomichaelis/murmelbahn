@@ -15,7 +15,6 @@ class _MockSkillShotCubit extends Mock implements SkillShotCubit {}
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final assets = [
-    Assets.images.skillShot.decal.keyName,
     Assets.images.skillShot.pin.keyName,
     Assets.images.skillShot.lit.keyName,
     Assets.images.skillShot.dimmed.keyName,
