@@ -123,11 +123,11 @@ class _BonusAnimationState extends State<BonusAnimation>
     final spriteSheet = SpriteSheet.fromColumnsAndRows(
       image: Flame.images.fromCache(widget._imagePath),
       columns: 8,
-      rows: 12,
+      rows: 9,
     );
     animation = spriteSheet.createAnimation(
       row: 0,
-      stepTime: 1 / 18,
+      stepTime: 1 / 24,
       to: spriteSheet.rows * spriteSheet.columns,
       loop: false,
     );
