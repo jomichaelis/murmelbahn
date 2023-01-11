@@ -48,12 +48,12 @@ class AndroidBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   AndroidBumper.a({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 4.12,
-          minorRadius: 2.47,
+          majorRadius: 3.9,
+          minorRadius: 2.77,
           rotation: 1.49,
           litAssetPath: Assets.images.android.bumper.a.lit.keyName,
           dimmedAssetPath: Assets.images.android.bumper.a.dimmed.keyName,
-          spritePosition: Vector2(0, -0.9),
+          spritePosition: Vector2(0, -0.8),
           bloc: AndroidBumperCubit(),
           children: [
             ...?children,
@@ -65,12 +65,12 @@ class AndroidBumper extends BodyComponent with InitialPosition, pf.ZIndex {
   AndroidBumper.b({
     Iterable<Component>? children,
   }) : this._(
-          majorRadius: 3.59,
-          minorRadius: 2.29,
+          majorRadius: 3.39,
+          minorRadius: 2.79,
           rotation: 1.65,
           litAssetPath: Assets.images.android.bumper.b.lit.keyName,
           dimmedAssetPath: Assets.images.android.bumper.b.dimmed.keyName,
-          spritePosition: Vector2(0, -0.8),
+          spritePosition: Vector2(0, -0.6),
           bloc: AndroidBumperCubit(),
           children: [
             ...?children,
@@ -83,11 +83,11 @@ class AndroidBumper extends BodyComponent with InitialPosition, pf.ZIndex {
     Iterable<Component>? children,
   }) : this._(
           majorRadius: 3.45,
-          minorRadius: 2.28,
+          minorRadius: 2.68,
           rotation: 1.49,
           litAssetPath: Assets.images.android.bumper.cow.lit.keyName,
           dimmedAssetPath: Assets.images.android.bumper.cow.dimmed.keyName,
-          spritePosition: Vector2(0.2, -0.75),
+          spritePosition: Vector2(0.2, -0.65),
           bloc: AndroidBumperCubit(),
           children: [
             ...?children,
