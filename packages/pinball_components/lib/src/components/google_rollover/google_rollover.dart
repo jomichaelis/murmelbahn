@@ -16,7 +16,7 @@ class GoogleRollover extends BodyComponent {
           renderBody: false,
           children: [
             GoogleRolloverBallContactBehavior(),
-            _RolloverDecalSpriteComponent(side: side),
+            // _RolloverDecalSpriteComponent(side: side),
             _PinSpriteAnimationComponent(side: side),
             ...?children,
           ],
@@ -35,33 +35,6 @@ class GoogleRollover extends BodyComponent {
       );
     final fixtureDef = FixtureDef(shape, isSensor: true);
     return world.createBody(BodyDef())..createFixture(fixtureDef);
-  }
-}
-
-class _RolloverDecalSpriteComponent extends SpriteComponent with HasGameRef {
-  _RolloverDecalSpriteComponent({required BoardSide side})
-      : _side = side,
-        super(
-          anchor: Anchor.center,
-          position: Vector2(side.isLeft ? -14.8 : 5.9, -11),
-          angle: 0.18 * side.direction,
-        );
-
-  final BoardSide _side;
-
-  @override
-  Future<void> onLoad() async {
-    await super.onLoad();
-
-    final sprite = Sprite(
-      gameRef.images.fromCache(
-        (_side.isLeft)
-            ? Assets.images.googleRollover.left.decal.keyName
-            : Assets.images.googleRollover.right.decal.keyName,
-      ),
-    );
-    this.sprite = sprite;
-    size = sprite.originalSize / 20;
   }
 }
 
