@@ -47,6 +47,24 @@ class CameraFocusingBehavior extends Component
     _foci.addAll(
       {
         GameStatus.waiting: _FocusData(
+          zoom: size.y / 175,
+          position: _foci[GameStatus.waiting]?.position ?? Vector2(0, -112),
+        ),
+        GameStatus.playing: _FocusData(
+          zoom: size.y / 190,
+          position: _foci[GameStatus.playing]?.position ?? Vector2(0, -20.8),
+        ),
+        GameStatus.gameOver: _FocusData(
+          zoom: size.y / 100,
+          position: _foci[GameStatus.gameOver]?.position ?? Vector2(0, -111),
+        ),
+      },
+    );
+
+    /*
+    _foci.addAll(
+      {
+        GameStatus.waiting: _FocusData(
           zoom: size.y / 200,
           position: _foci[GameStatus.waiting]?.position ?? Vector2(0, -90),
         ),
@@ -60,6 +78,7 @@ class CameraFocusingBehavior extends Component
         ),
       },
     );
+     */
 
     if (_activeFocus != null) {
       _snap(_activeFocus!);
