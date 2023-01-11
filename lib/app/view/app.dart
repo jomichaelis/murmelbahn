@@ -6,7 +6,6 @@ import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:murmelbahn/game/game.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
 import 'package:murmelbahn/start_game/start_game.dart';
-import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_ui/pinball_ui.dart';
 import 'package:platform_helper/platform_helper.dart';
 import 'package:share_repository/share_repository.dart';
@@ -17,19 +16,16 @@ class App extends StatelessWidget {
     required AuthenticationRepository authenticationRepository,
     required LeaderboardRepository leaderboardRepository,
     required ShareRepository shareRepository,
-    required PinballAudioPlayer pinballAudioPlayer,
     required PlatformHelper platformHelper,
   })  : _authenticationRepository = authenticationRepository,
         _leaderboardRepository = leaderboardRepository,
         _shareRepository = shareRepository,
-        _pinballAudioPlayer = pinballAudioPlayer,
         _platformHelper = platformHelper,
         super(key: key);
 
   final AuthenticationRepository _authenticationRepository;
   final LeaderboardRepository _leaderboardRepository;
   final ShareRepository _shareRepository;
-  final PinballAudioPlayer _pinballAudioPlayer;
   final PlatformHelper _platformHelper;
 
   @override
@@ -39,7 +35,6 @@ class App extends StatelessWidget {
         RepositoryProvider.value(value: _authenticationRepository),
         RepositoryProvider.value(value: _leaderboardRepository),
         RepositoryProvider.value(value: _shareRepository),
-        RepositoryProvider.value(value: _pinballAudioPlayer),
         RepositoryProvider.value(value: _platformHelper),
       ],
       child: MultiBlocProvider(

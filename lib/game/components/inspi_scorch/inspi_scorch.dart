@@ -18,19 +18,16 @@ class InspiScorch extends Component {
             InspiBumper.a(
               children: [
                 ScoringContactBehavior(points: Points.twentyThousand),
-                BumperNoiseBehavior(),
               ],
             )..initialPosition = Vector2(-22.9, -41.65),
             InspiBumper.b(
               children: [
                 ScoringContactBehavior(points: Points.twentyThousand),
-                BumperNoiseBehavior(),
               ],
             )..initialPosition = Vector2(-21.25, -57.9),
             InspiBumper.c(
               children: [
                 ScoringContactBehavior(points: Points.twentyThousand),
-                BumperNoiseBehavior(),
               ],
             )..initialPosition = Vector2(-3.3, -52.55),
             InspiAnimatronic(

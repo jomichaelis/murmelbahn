@@ -9,7 +9,7 @@ import '../../helpers/helpers.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  final asset = Assets.images.dash.animatronic.keyName;
+  final asset = Assets.images.murmeltier.animatronic.keyName;
   final flameTester = FlameTester(() => TestGame([asset]));
 
   group('DashAnimatronic', () {
@@ -17,13 +17,13 @@ void main() {
       'renders correctly',
       setUp: (game, tester) async {
         await game.images.load(asset);
-        await game.ensureAdd(DashAnimatronic()..playing = true);
+        await game.ensureAdd(MurmeltierAnimatronic()..playing = true);
         game.camera.followVector2(Vector2.zero());
         await tester.pump();
       },
       verify: (game, tester) async {
         final animationDuration =
-            game.firstChild<DashAnimatronic>()!.animation!.totalDuration();
+            game.firstChild<MurmeltierAnimatronic>()!.animation!.totalDuration();
 
         await expectLater(
           find.byGame<TestGame>(),
@@ -49,20 +49,20 @@ void main() {
     flameTester.test(
       'loads correctly',
       (game) async {
-        final dashAnimatronic = DashAnimatronic();
-        await game.ensureAdd(dashAnimatronic);
+        final murmeltierAnimatronic = MurmeltierAnimatronic();
+        await game.ensureAdd(murmeltierAnimatronic);
 
-        expect(game.contains(dashAnimatronic), isTrue);
+        expect(game.contains(murmeltierAnimatronic), isTrue);
       },
     );
 
     flameTester.test('adds new children', (game) async {
       final component = Component();
-      final dashAnimatronic = DashAnimatronic(
+      final murmeltierAnimatronic = MurmeltierAnimatronic(
         children: [component],
       );
-      await game.ensureAdd(dashAnimatronic);
-      expect(dashAnimatronic.children, contains(component));
+      await game.ensureAdd(murmeltierAnimatronic);
+      expect(murmeltierAnimatronic.children, contains(component));
     });
   });
 }

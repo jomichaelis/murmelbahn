@@ -11,9 +11,9 @@ void main() {
   group('DinoWalls', () {
     TestWidgetsFlutterBinding.ensureInitialized();
     final assets = [
-      Assets.images.dino.topWall.keyName,
-      Assets.images.dino.topWallTunnel.keyName,
-      Assets.images.dino.bottomWall.keyName,
+      Assets.images.jurteArea.topWall.keyName,
+      Assets.images.jurteArea.topWallTunnel.keyName,
+      Assets.images.jurteArea.bottomWall.keyName,
     ];
     final flameTester = FlameTester(() => TestGame(assets));
 

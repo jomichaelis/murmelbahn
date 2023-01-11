@@ -30,25 +30,21 @@ class MurmeltierCamp extends Component with ZIndex {
                 Signpost(
                   children: [
                     ScoringContactBehavior(points: Points.fiveThousand),
-                    BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(7.95, -58.35),
                 MurmeltierKothe.main(
                   children: [
                     ScoringContactBehavior(points: Points.twoHundredThousand),
-                    BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(18.55, -59.35),
                 MurmeltierKothe.a(
                   children: [
                     ScoringContactBehavior(points: Points.twentyThousand),
-                    BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(8.95, -51.95),
                 MurmeltierKothe.b(
                   children: [
                     ScoringContactBehavior(points: Points.twentyThousand),
-                    BumperNoiseBehavior(),
                   ],
                 )..initialPosition = Vector2(20.8, -46.75),
                 MurmeltierAnimatronic(

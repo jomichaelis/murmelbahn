@@ -26,7 +26,7 @@ class _TestGame extends Forge2DGame {
   Future<void> pump(
     Signpost child, {
     SignpostCubit? signpostBloc,
-    DashBumpersCubit? dashBumpersBloc,
+    MurmeltierKothenCubit? murmeltierKothenBloc,
   }) async {
     await onLoad();
     await ensureAdd(
@@ -35,8 +35,8 @@ class _TestGame extends Forge2DGame {
           FlameBlocProvider<SignpostCubit, SignpostState>.value(
             value: signpostBloc ?? SignpostCubit(),
           ),
-          FlameBlocProvider<DashBumpersCubit, DashBumpersState>.value(
-            value: dashBumpersBloc ?? DashBumpersCubit(),
+          FlameBlocProvider<MurmeltierKothenCubit, MurmeltierKothenState>.value(
+            value: murmeltierKothenBloc ?? MurmeltierKothenCubit(),
           ),
         ],
         children: [child],
@@ -47,7 +47,7 @@ class _TestGame extends Forge2DGame {
 
 class _MockSignpostCubit extends Mock implements SignpostCubit {}
 
-class _MockDashBumpersCubit extends Mock implements DashBumpersCubit {}
+class _MockMurmeltierKothenCubit extends Mock implements MurmeltierKothenCubit {}
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -172,29 +172,29 @@ void main() {
     });
 
     flameTester.testGameWidget(
-      'listenWhen is true when all dash bumpers are activated',
+      'listenWhen is true when all murmeltier kothen are activated',
       setUp: (game, tester) async {
-        final activatedBumpersState = DashBumpersState(
-          bumperSpriteStates: {
-            for (var id in DashBumperId.values) id: DashBumperSpriteState.active
+        final activatedKothenState = MurmeltierKothenState(
+          kotheSpriteStates: {
+            for (var id in MurmeltierKotheId.values) id: MurmeltierKotheSpriteState.active
           },
         );
         final signpost = Signpost();
-        final dashBumpersBloc = _MockDashBumpersCubit();
+        final murmeltierKothenBloc = _MockMurmeltierKothenCubit();
         whenListen(
-          dashBumpersBloc,
-          const Stream<DashBumpersState>.empty(),
-          initialState: DashBumpersState.initial(),
+          murmeltierKothenBloc,
+          const Stream<MurmeltierKothenState>.empty(),
+          initialState: MurmeltierKothenState.initial(),
         );
-        await game.pump(signpost, dashBumpersBloc: dashBumpersBloc);
+        await game.pump(signpost, murmeltierKothenBloc: murmeltierKothenBloc);
 
         final signpostListener = game
             .descendants()
-            .whereType<FlameBlocListener<DashBumpersCubit, DashBumpersState>>()
+            .whereType<FlameBlocListener<MurmeltierKothenCubit, MurmeltierKothenState>>()
             .single;
         final listenWhen = signpostListener.listenWhen(
-          DashBumpersState.initial(),
-          activatedBumpersState,
+          MurmeltierKothenState.initial(),
+          activatedKothenState,
         );
 
         expect(listenWhen, isTrue);
@@ -211,26 +211,26 @@ void main() {
           const Stream<SignpostState>.empty(),
           initialState: SignpostState.inactive,
         );
-        final dashBumpersBloc = _MockDashBumpersCubit();
+        final murmeltierKothenBloc = _MockMurmeltierKothenCubit();
         whenListen(
-          dashBumpersBloc,
-          const Stream<DashBumpersState>.empty(),
-          initialState: DashBumpersState.initial(),
+          murmeltierKothenBloc,
+          const Stream<MurmeltierKothenState>.empty(),
+          initialState: MurmeltierKothenState.initial(),
         );
         await game.pump(
           signpost,
           signpostBloc: signpostBloc,
-          dashBumpersBloc: dashBumpersBloc,
+          murmeltierKothenBloc: murmeltierKothenBloc,
         );
 
         game
             .descendants()
-            .whereType<FlameBlocListener<DashBumpersCubit, DashBumpersState>>()
+            .whereType<FlameBlocListener<MurmeltierKothenCubit, MurmeltierKothenState>>()
             .single
-            .onNewState(DashBumpersState.initial());
+            .onNewState(MurmeltierKothenState.initial());
 
         verify(signpostBloc.onProgressed).called(1);
-        verify(dashBumpersBloc.onReset).called(1);
+        verify(murmeltierKothenBloc.onReset).called(1);
       },
     );
 

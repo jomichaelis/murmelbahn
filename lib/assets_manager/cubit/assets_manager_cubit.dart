@@ -1,16 +1,14 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:murmelbahn/game/game.dart';
-import 'package:pinball_audio/pinball_audio.dart';
 
 part 'assets_manager_state.dart';
 
 class AssetsManagerCubit extends Cubit<AssetsManagerState> {
-  AssetsManagerCubit(this._game, this._audioPlayer)
+  AssetsManagerCubit(this._game)
       : super(const AssetsManagerState.initial());
 
   final PinballGame _game;
-  final PinballAudioPlayer _audioPlayer;
 
   Future<void> load() async {
     /// Assigning loadables is a very expensive operation. With this purposeful
@@ -21,7 +19,6 @@ class AssetsManagerCubit extends Cubit<AssetsManagerState> {
     final loadables = <Future<void> Function()>[
       _game.preFetchLeaderboard,
       ..._game.preLoadAssets(),
-      ..._audioPlayer.load(),
       ...BonusAnimation.loadAssets(),
     ];
     emit(

@@ -51,18 +51,6 @@ void main() {
           );
         },
       );
-
-      flameTester.test(
-        'a PlungerNoiseBehavior',
-        (game) async {
-          final plunger = Plunger();
-          await game.ensureAdd(plunger);
-          expect(
-            game.descendants().whereType<PlungerNoiseBehavior>().length,
-            equals(1),
-          );
-        },
-      );
     });
 
     group('renders correctly', () {

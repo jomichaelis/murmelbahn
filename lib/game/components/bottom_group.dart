@@ -52,7 +52,6 @@ class _BottomGroupSide extends Component {
       children: [
         ScoringContactBehavior(points: Points.fiveThousand)
           ..applyTo(['bouncy_edge']),
-        KickerNoiseBehavior()..applyTo(['bouncy_edge']),
       ],
     )..initialPosition = Vector2(
         (22.44 * direction) + centerXAdjustment,

@@ -1,7 +1,6 @@
 import 'package:flame/components.dart';
 import 'package:flame_bloc/flame_bloc.dart';
 import 'package:murmelbahn/game/game.dart';
-import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 
@@ -19,7 +18,6 @@ class GameBlocStatusListener extends Component
       case GameStatus.waiting:
         break;
       case GameStatus.playing:
-        readProvider<PinballAudioPlayer>().play(PinballAudio.backgroundMusic);
         _resetBonuses();
         gameRef
             .descendants()
@@ -33,7 +31,6 @@ class GameBlocStatusListener extends Component
         gameRef.overlays.remove(PinballGame.replayButtonOverlay);
         break;
       case GameStatus.gameOver:
-        readProvider<PinballAudioPlayer>().play(PinballAudio.gameOverVoiceOver);
         gameRef.descendants().whereType<Backbox>().first.requestName(
               score: state.displayScore,
             );

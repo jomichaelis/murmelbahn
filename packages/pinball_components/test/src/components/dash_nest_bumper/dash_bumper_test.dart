@@ -7,26 +7,26 @@ import 'package:flame_test/flame_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_components/src/components/bumping_behavior.dart';
-import 'package:pinball_components/src/components/dash_bumper/behaviors/behaviors.dart';
+import 'package:pinball_components/src/components/murmeltier_kothe/behaviors/behaviors.dart';
 
 class _TestGame extends Forge2DGame {
   @override
   Future<void> onLoad() async {
     images.prefix = '';
     await images.loadAll([
-      Assets.images.dash.bumper.main.active.keyName,
-      Assets.images.dash.bumper.main.inactive.keyName,
-      Assets.images.dash.bumper.a.active.keyName,
-      Assets.images.dash.bumper.a.inactive.keyName,
-      Assets.images.dash.bumper.b.active.keyName,
-      Assets.images.dash.bumper.b.inactive.keyName,
+      Assets.images.murmeltier.kothe.main.active.keyName,
+      Assets.images.murmeltier.kothe.main.inactive.keyName,
+      Assets.images.murmeltier.kothe.a.active.keyName,
+      Assets.images.murmeltier.kothe.a.inactive.keyName,
+      Assets.images.murmeltier.kothe.b.active.keyName,
+      Assets.images.murmeltier.kothe.b.inactive.keyName,
     ]);
   }
 
-  Future<void> pump(DashBumper child) async {
+  Future<void> pump(MurmeltierKothe child) async {
     await ensureAdd(
-      FlameBlocProvider<DashBumpersCubit, DashBumpersState>.value(
-        value: DashBumpersCubit(),
+      FlameBlocProvider<MurmeltierKothenCubit, MurmeltierKothenState>.value(
+        value: MurmeltierKothenCubit(),
         children: [child],
       ),
     );

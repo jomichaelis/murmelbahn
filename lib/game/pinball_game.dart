@@ -10,7 +10,6 @@ import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:murmelbahn/game/behaviors/behaviors.dart';
 import 'package:murmelbahn/game/game.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
-import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_components/pinball_components.dart';
 import 'package:pinball_flame/pinball_flame.dart';
 import 'package:platform_helper/platform_helper.dart';
@@ -23,11 +22,9 @@ class PinballGame extends PinballForge2DGame
     required this.shareRepository,
     required GameBloc gameBloc,
     required AppLocalizations l10n,
-    required PinballAudioPlayer audioPlayer,
     required this.platformHelper,
   })  : focusNode = FocusNode(),
         _gameBloc = gameBloc,
-        _audioPlayer = audioPlayer,
         _l10n = l10n,
         super(
           gravity: Vector2(0, 30),
@@ -48,8 +45,6 @@ class PinballGame extends PinballForge2DGame
   Color backgroundColor() => Colors.transparent;
 
   final FocusNode focusNode;
-
-  final PinballAudioPlayer _audioPlayer;
 
   final LeaderboardRepository leaderboardRepository;
 
@@ -86,14 +81,12 @@ class PinballGame extends PinballForge2DGame
         children: [
           MultiFlameProvider(
             providers: [
-              FlameProvider<PinballAudioPlayer>.value(_audioPlayer),
               FlameProvider<LeaderboardRepository>.value(leaderboardRepository),
               FlameProvider<ShareRepository>.value(shareRepository),
               FlameProvider<AppLocalizations>.value(_l10n),
               FlameProvider<PlatformHelper>.value(platformHelper),
             ],
             children: [
-              BonusNoiseBehavior(),
               GameBlocStatusListener(),
               BallSpawningBehavior(),
               CameraFocusingBehavior(),
@@ -120,7 +113,6 @@ class PinballGame extends PinballForge2DGame
                       SkillShot(
                         children: [
                           ScoringContactBehavior(points: Points.oneMillion),
-                          RolloverNoiseBehavior(),
                         ],
                       ),
                       AndroidAcres(),

@@ -25,7 +25,6 @@ class Plunger extends BodyComponent with InitialPosition, Layered, ZIndex {
               children: [
                 _PlungerSpriteAnimationGroupComponent(),
                 PlungerReleasingBehavior(strength: 11),
-                PlungerNoiseBehavior(),
               ],
             ),
             PlungerJointingBehavior(compressionDistance: 9.2),

@@ -18,7 +18,6 @@ class JurteArea extends Component {
             JurteBumper.main(
               children: [
                 ScoringContactBehavior(points: Points.twoHundredThousand),
-                BumperNoiseBehavior(),
               ],
             )..initialPosition = Vector2(24.2, -13.4),
             DinoWalls(),

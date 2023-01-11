@@ -27,7 +27,6 @@ class Flipper extends BodyComponent with KeyboardHandler, InitialPosition {
               create: FlipperCubit.new,
               children: [
                 FlipperMovingBehavior(strength: 90),
-                FlipperNoiseBehavior(),
               ],
             ),
           ],
