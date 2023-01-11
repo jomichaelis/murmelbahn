@@ -307,10 +307,6 @@ class $AssetsImagesSignpostGen {
 class $AssetsImagesSkillShotGen {
   const $AssetsImagesSkillShotGen();
 
-  /// File path: assets/images/skill_shot/decal.png
-  AssetGenImage get decal =>
-      const AssetGenImage('assets/images/skill_shot/decal.png');
-
   /// File path: assets/images/skill_shot/dimmed.png
   AssetGenImage get dimmed =>
       const AssetGenImage('assets/images/skill_shot/dimmed.png');
@@ -690,10 +686,6 @@ class $AssetsImagesAndroidRampArrowGen {
   /// File path: assets/images/android/ramp/arrow/active4.png
   AssetGenImage get active4 =>
       const AssetGenImage('assets/images/android/ramp/arrow/active4.png');
-
-  /// File path: assets/images/android/ramp/arrow/active5.png
-  AssetGenImage get active5 =>
-      const AssetGenImage('assets/images/android/ramp/arrow/active5.png');
 
   /// File path: assets/images/android/ramp/arrow/inactive.png
   AssetGenImage get inactive =>

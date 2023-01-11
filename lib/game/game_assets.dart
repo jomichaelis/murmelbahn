@@ -82,9 +82,6 @@ extension PinballGameAssetsX on PinballGame {
       () => images.load(
             components.Assets.images.android.ramp.arrow.active4.keyName,
           ),
-      () => images.load(
-            components.Assets.images.android.ramp.arrow.active5.keyName,
-          ),
       () => images.load(components.Assets.images.android.rail.main.keyName),
       () => images.load(components.Assets.images.android.rail.exit.keyName),
       () => images.load(components.Assets.images.android.bumper.a.lit.keyName),
@@ -172,7 +169,6 @@ extension PinballGameAssetsX on PinballGame {
       () => images.load(components.Assets.images.flapper.backSupport.keyName),
       () => images.load(components.Assets.images.flapper.frontSupport.keyName),
       () => images.load(components.Assets.images.flapper.flap.keyName),
-      () => images.load(components.Assets.images.skillShot.decal.keyName),
       () => images.load(components.Assets.images.skillShot.pin.keyName),
       () => images.load(components.Assets.images.skillShot.lit.keyName),
       () => images.load(components.Assets.images.skillShot.dimmed.keyName),
