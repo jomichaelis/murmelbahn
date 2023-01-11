@@ -5,7 +5,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:murmelbahn/game/game.dart';
 import 'package:murmelbahn/l10n/l10n.dart';
-import 'package:murmelbahn/registration/registration.dart';
 import 'package:murmelbahn/start_game/start_game.dart';
 import 'package:pinball_audio/pinball_audio.dart';
 import 'package:pinball_ui/pinball_ui.dart';
@@ -45,7 +44,6 @@ class App extends StatelessWidget {
       ],
       child: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (_) => RegistrationBloc()),
           BlocProvider(create: (_) => StartGameBloc()),
           BlocProvider(create: (_) => GameBloc()),
         ],
@@ -57,7 +55,7 @@ class App extends StatelessWidget {
             GlobalMaterialLocalizations.delegate,
           ],
           supportedLocales: AppLocalizations.supportedLocales,
-          home: const PinballGameRootPage(),
+          home: const PinballGamePage(),
         ),
       ),
     );
