@@ -687,6 +687,10 @@ class $AssetsImagesAndroidRampArrowGen {
   AssetGenImage get active4 =>
       const AssetGenImage('assets/images/android/ramp/arrow/active4.png');
 
+  /// File path: assets/images/android/ramp/arrow/active5.png
+  AssetGenImage get active5 =>
+      const AssetGenImage('assets/images/android/ramp/arrow/active5.png');
+
   /// File path: assets/images/android/ramp/arrow/inactive.png
   AssetGenImage get inactive =>
       const AssetGenImage('assets/images/android/ramp/arrow/inactive.png');
