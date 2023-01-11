@@ -1,5 +1,6 @@
 flutter_icons:
-  android: "launcher_icon"
+  android: false  # "launcher_icon"
+  # icons generated manually with https://icon.kitchen/
   # ios: true
   image_path: "assets/launcher_icon/launcher_icon.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
